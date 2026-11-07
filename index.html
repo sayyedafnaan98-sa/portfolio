@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,248 +9,1036 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  color-scheme:light;
-  --bg:#F6F7F9;
-  --surface:#FFFFFF;
-  --ink:#101B33;
-  --muted:#55607A;
-  --line:#D9DEE7;
-  --accent:#1F43A0;
-  --accent-ink:#FFFFFF;
-  --tint:rgba(31,67,160,.08);
-  --mark:#A8741A;
-  --font-display:'Source Serif 4',Georgia,'Times New Roman',serif;
-  --font-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+:root {
+  color-scheme: light;
+  --bg: #F6F7F9;
+  --surface: #FFFFFF;
+  --ink: #101B33;
+  --muted: #55607A;
+  --line: #D9DEE7;
+  --accent: #1F43A0;
+  --accent-ink: #FFFFFF;
+  --tint: rgba(31,67,160,.08);
+  --mark: #A8741A;
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', system-ui, sans-serif;
 }
-@media (prefers-color-scheme: dark){
-  :root{
-    --bg:#0C1424;--surface:#121C31;--ink:#E9EDF5;--muted:#A3AEC4;--line:#26324B;
-    --accent:#8FB0F5;--accent-ink:#0A1630;--tint:rgba(143,176,245,.12);--mark:#D9A441;
-    color-scheme:dark;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0C1424;
+    --surface: #121C31;
+    --ink: #E9EDF5;
+    --muted: #A3AEC4;
+    --line: #26324B;
+    --accent: #8FB0F5;
+    --accent-ink: #0A1630;
+    --tint: rgba(143,176,245,.12);
+    --mark: #D9A441;
+    color-scheme: dark;
   }
 }
 
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{
-  margin:0;background:var(--bg);color:var(--ink);
-  font-family:var(--font-body);font-size:1rem;line-height:1.65;
-  padding-left:max(16px,env(safe-area-inset-left,0px));
-  padding-right:max(16px,env(safe-area-inset-right,0px));
-  -webkit-font-smoothing:antialiased;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.12;letter-spacing:-.015em}
-p{margin:0}
-a{color:inherit}
-:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
-.wrap{max-width:1120px;margin-inline:auto}
-.eyebrow{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
 
-/* header */
-header{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}
-.logo{font-family:var(--font-display);font-weight:600;font-size:1.2rem;letter-spacing:-.01em;text-decoration:none}
-nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
-nav a{font-size:.9rem;color:var(--muted);text-decoration:none;font-weight:500}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.3rem;border-radius:4px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;transition:background .2s,border-color .2s,color .2s}
-.btn:hover{background:var(--ink);color:var(--bg)}
-.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn.primary:hover{filter:brightness(1.1);background:var(--accent);color:var(--accent-ink)}
-.btn.sm{padding:.5rem 1rem;font-size:.85rem}
-
-/* sections */
-section{padding-block:clamp(3.5rem,8vw,6.5rem);border-top:1px solid var(--line)}
-section.first{border-top:0}
-.head{display:flex;flex-direction:column;gap:.8rem;margin-bottom:clamp(2rem,4vw,3.2rem);max-width:44rem}
-.head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:600}
-.head p{color:var(--muted);max-width:60ch}
-
-/* hero */
-.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:600;letter-spacing:-.03em;line-height:1.02;margin:1rem 0 1.4rem}
-.hero .role{font-family:var(--font-display);font-size:clamp(1.25rem,2.3vw,1.6rem);font-weight:500;letter-spacing:-.01em;max-width:30ch;text-wrap:balance;color:var(--ink)}
-.hero .lead{color:var(--muted);max-width:58ch;margin:1.2rem 0 2rem}
-.cta{display:flex;gap:.8rem;flex-wrap:wrap}
-.glance{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.6rem 1.7rem 1.2rem;min-width:0}
-.glance-top{display:flex;align-items:center;gap:1.1rem;padding-bottom:1.2rem;border-bottom:2px solid var(--mark)}
-.avatar{position:relative;width:92px;height:92px;flex:none;border-radius:50%;overflow:hidden;background:var(--tint);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.9rem;color:var(--accent);letter-spacing:-.02em}
-.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.glance h2{font-family:var(--font-body);font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.glance .g-sub{font-family:var(--font-display);font-size:1.25rem;font-weight:600;letter-spacing:-.01em;margin-top:.25rem;line-height:1.2}
-.glance dl{margin:0}
-.glance .g-row{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding-block:.85rem;border-bottom:1px solid var(--line)}
-.glance .g-row:last-child{border-bottom:0}
-.glance dt{font-size:.82rem;color:var(--muted)}
-.glance dd{margin:0;font-weight:500;font-size:.95rem}
-
-/* results */
-.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.6rem 2.8rem}
-.res{border-top:2px solid var(--ink);padding-top:1.1rem;min-width:0}
-.res .n{font-family:var(--font-display);font-weight:600;font-size:clamp(2.8rem,5vw,3.7rem);letter-spacing:-.03em;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
-.res h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;margin:.8rem 0 .35rem;letter-spacing:0}
-.res p{color:var(--muted);font-size:.92rem}
-.res .src{display:block;margin-top:.8rem;font-size:.74rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
-.compliance{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:center;color:var(--muted);font-size:.92rem}
-.compliance b{color:var(--ink);font-weight:600}
-
-/* experience */
-.roles{display:flex;flex-direction:column}
-.role-row{display:grid;grid-template-columns:minmax(0,270px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:2.4rem;border-top:1px solid var(--line)}
-.role-row:first-child{border-top:0;padding-top:0}
-.meta h3{font-size:1.5rem;font-weight:600;margin-bottom:.35rem}
-.meta .co{font-weight:600;color:var(--accent)}
-.meta .when{font-size:.86rem;color:var(--muted);margin-top:.3rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
-.now{background:var(--tint);color:var(--accent);padding:.1rem .6rem;border-radius:99px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.role-row ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.85rem}
-.role-row li{position:relative;padding-left:1.3rem;color:var(--muted);max-width:68ch}
-.role-row li::before{content:"";position:absolute;left:0;top:.68em;width:.42rem;height:.42rem;background:var(--mark)}
-.role-row li strong{color:var(--ink);font-weight:600}
-.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
-.tag{font-size:.76rem;padding:.2rem .65rem;border:1px solid var(--line);border-radius:3px;color:var(--muted);font-weight:500}
-
-/* skills */
-.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.6rem 3.5rem}
-.grp h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;margin-bottom:.9rem;letter-spacing:0}
-.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
-.chips li{font-size:.88rem;padding:.3rem .8rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)}
-
-/* certifications and education */
-.list{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
-.list-row{display:grid;grid-template-columns:minmax(0,270px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:1.4rem;border-bottom:1px solid var(--line)}
-.list-row .when{font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
-.list-row h3{font-size:1.2rem;font-weight:600}
-.list-row p{color:var(--muted);font-size:.95rem}
-
-/* contact */
-.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:start}
-.contact h2{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:600;letter-spacing:-.03em;line-height:1.02}
-.contact .lead{color:var(--muted);margin-top:1.2rem;max-width:44ch}
-.rows{border-top:2px solid var(--ink);min-width:0}
-.crow{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line)}
-.crow .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
-.crow .val{font-weight:500;overflow-wrap:anywhere}
-.crow a.val{text-decoration:none}
-.crow a.val:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
-.crow button{font-family:var(--font-body);font-size:.78rem;font-weight:500;padding:.3rem .75rem;border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer}
-.crow button:hover{border-color:var(--ink);color:var(--ink)}
-
-footer{border-top:1px solid var(--line);padding-block:1.8rem 2.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
-footer a{text-decoration:none}
-footer a:hover{color:var(--ink)}
-
-@media (max-width:900px){
-  .hero,.contact{grid-template-columns:minmax(0,1fr)}
-  .results{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .role-row,.list-row{grid-template-columns:minmax(0,1fr);gap:1.2rem}
-  .list-row{gap:.3rem}
-  .stack{grid-template-columns:minmax(0,1fr)}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
-@media (max-width:760px){
-  nav{display:none}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
 }
-@media (max-width:520px){
-  .results{grid-template-columns:minmax(0,1fr)}
-  .crow{grid-template-columns:minmax(0,1fr) auto}
-  .crow .l{grid-column:1 / -1}
-  .glance .g-row{grid-template-columns:minmax(0,1fr);gap:.2rem}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  margin: 0;
+  text-wrap: balance;
+  line-height: 1.12;
+  letter-spacing: -.015em;
 }
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *{transition:none!important;animation:none!important}
+
+p { margin: 0; }
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+.wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.eyebrow {
+  font-size: .76rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Header and navigation */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px)));
+  padding-inline: max(16px, env(safe-area-inset-left, 0px));
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: .85rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -.01em;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-size: .9rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover { color: var(--ink); }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .72rem 1.3rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: .92rem;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  transition: background .2s, border-color .2s, color .2s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  color: var(--bg);
+}
+
+.btn.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn.sm {
+  padding: .5rem 1rem;
+  font-size: .85rem;
+}
+
+/* General sections */
+
+section {
+  padding-block: clamp(3.5rem, 8vw, 6.5rem);
+  border-top: 1px solid var(--line);
+}
+
+section.first { border-top: 0; }
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-bottom: clamp(2rem, 4vw, 3.2rem);
+  max-width: 44rem;
+}
+
+.head h2 {
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 600;
+}
+
+.head p {
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+/* Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.02;
+  margin: 1rem 0 1.4rem;
+}
+
+.hero .role {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+  font-weight: 500;
+  max-width: 30ch;
+  color: var(--ink);
+}
+
+.hero .lead {
+  color: var(--muted);
+  max-width: 58ch;
+  margin: 1.2rem 0 2rem;
+}
+
+.cta {
+  display: flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+}
+
+.glance {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.6rem 1.7rem 1.2rem;
+  min-width: 0;
+}
+
+.glance-top {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 2px solid var(--mark);
+}
+
+.avatar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  flex: none;
+  border-radius: 50%;
+  overflow: hidden;
+  background: var(--tint);
+  border: 1px solid var(--line);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--accent);
+}
+
+.avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.glance h2 {
+  font-family: var(--font-body);
+  font-size: .76rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.glance .g-sub {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: .25rem;
+}
+
+.glance dl { margin: 0; }
+
+.glance .g-row {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 1rem;
+  padding-block: .85rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.glance .g-row:last-child { border-bottom: 0; }
+.glance dt { font-size: .82rem; color: var(--muted); }
+.glance dd { margin: 0; font-weight: 500; font-size: .95rem; }
+
+/* Results */
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.6rem 2.8rem;
+}
+
+.res {
+  border-top: 2px solid var(--ink);
+  padding-top: 1.1rem;
+  min-width: 0;
+}
+
+.res .n {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.8rem, 5vw, 3.7rem);
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.res h3 {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin: .8rem 0 .35rem;
+}
+
+.res p { color: var(--muted); font-size: .92rem; }
+
+.res .src {
+  display: block;
+  margin-top: .8rem;
+  font-size: .74rem;
+  color: var(--muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.compliance {
+  margin-top: 3rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem 1.4rem;
+  align-items: center;
+  color: var(--muted);
+  font-size: .92rem;
+}
+
+.compliance b { color: var(--ink); }
+
+/* Projects */
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.project .project-type {
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.project h3 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  margin: .7rem 0;
+}
+
+.project p {
+  color: var(--muted);
+  font-size: .94rem;
+}
+
+.project .tags { margin-top: 1rem; }
+
+.project .project-link {
+  margin-top: auto;
+  padding-top: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: .9rem;
+  text-decoration: none;
+}
+
+.project .project-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Experience */
+
+.roles {
+  display: flex;
+  flex-direction: column;
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-block: 2.4rem;
+  border-top: 1px solid var(--line);
+}
+
+.role-row:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.meta h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: .35rem;
+}
+
+.meta .co {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.meta .when {
+  font-size: .86rem;
+  color: var(--muted);
+  margin-top: .3rem;
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.now {
+  background: var(--tint);
+  color: var(--accent);
+  padding: .1rem .6rem;
+  border-radius: 99px;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.role-row ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.role-row li {
+  position: relative;
+  padding-left: 1.3rem;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.role-row li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .68em;
+  width: .42rem;
+  height: .42rem;
+  background: var(--mark);
+}
+
+.role-row li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: 1.4rem;
+}
+
+.tag {
+  font-size: .76rem;
+  padding: .2rem .65rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Skills */
+
+.stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.6rem 3.5rem;
+}
+
+.grp h3 {
+  font-family: var(--font-body);
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: .9rem;
+}
+
+.chips {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.chips li {
+  font-size: .88rem;
+  padding: .3rem .8rem;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* Certifications and education */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--ink);
+}
+
+.list-row {
+  display: grid;
+  grid-template-columns: minmax(0, 270px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding-block: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.list-row .when {
+  font-size: .9rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.list-row h3 { font-size: 1.2rem; font-weight: 600; }
+.list-row p { color: var(--muted); font-size: .95rem; }
+
+/* Contact */
+
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.contact h2 {
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+  font-weight: 600;
+  letter-spacing: -.03em;
+  line-height: 1.02;
+}
+
+.contact .lead {
+  color: var(--muted);
+  margin-top: 1.2rem;
+  max-width: 44ch;
+}
+
+.rows {
+  border-top: 2px solid var(--ink);
+  min-width: 0;
+}
+
+.crow {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: center;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.crow .l {
+  font-size: .74rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: 500;
+}
+
+.crow .val {
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+.crow a.val { text-decoration: none; }
+
+.crow a.val:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.crow button {
+  font-family: var(--font-body);
+  font-size: .78rem;
+  font-weight: 500;
+  padding: .3rem .75rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.crow button:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* Footer */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-block: 1.8rem 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: .85rem;
+}
+
+footer a { text-decoration: none; }
+footer a:hover { color: var(--ink); }
+
+/* Responsive layout */
+
+@media (max-width: 900px) {
+  .hero, .contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .results {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .role-row, .list-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.2rem;
+  }
+
+  .list-row { gap: .3rem; }
+  .stack { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 760px) {
+  nav { display: none; }
+  .projects { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 520px) {
+  .results { grid-template-columns: minmax(0, 1fr); }
+
+  .crow {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .crow .l { grid-column: 1 / -1; }
+
+  .glance .g-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: .2rem;
+  }
+
+  .glance-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
 }
 </style>
 </head>
+
 <body>
 
 <header>
   <div class="wrap bar">
     <a class="logo" href="#top">Afnaan Sayyed</a>
+
     <nav aria-label="Primary">
       <ul>
         <li><a href="#results">Results</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#certifications">Certifications</a></li>
         <li><a href="#education">Education</a></li>
       </ul>
     </nav>
+
     <a class="btn primary sm" href="#contact">Contact</a>
   </div>
 </header>
 
 <main id="top">
+
+  <!-- HERO -->
   <section class="first">
     <div class="wrap hero">
+
       <div>
         <span class="eyebrow">Senior Cloud Engineer</span>
         <h1>Afnaan Shafkat Sayyed</h1>
-        <p class="role">Secure, highly available cloud infrastructure on AWS and Azure.</p>
-        <p class="lead">I have spent 5+ years designing, deploying and managing cloud infrastructure for healthcare, banking and e-commerce. Today I engineer the platforms behind healthcare applications, claims processing and AI/ML workloads at UnitedHealth Group.</p>
+
+        <p class="role">
+          Secure, highly available cloud infrastructure on AWS and Azure.
+        </p>
+
+        <p class="lead">
+          I have spent 5+ years designing, deploying and managing cloud
+          infrastructure for healthcare, banking and e-commerce. Today I
+          engineer the platforms behind healthcare applications, claims
+          processing and AI/ML workloads at UnitedHealth Group.
+        </p>
+
         <div class="cta">
-          <a class="btn primary" href="RESUME.pdf" download>Download resume</a>
+          <a class="btn primary" href="RESUME.pdf" download>
+            Download resume
+          </a>
           <a class="btn" href="#contact">Contact</a>
         </div>
       </div>
+
       <aside class="glance" aria-labelledby="glance-h">
         <div class="glance-top">
-          <div class="avatar"><span aria-hidden="true">AS</span><img src="image.png" alt="Portrait of Afnaan Shafkat Sayyed" width="92" height="92" onerror="this.remove()"></div>
+          <div class="avatar">
+            <span aria-hidden="true">AS</span>
+            <img src="image.png"
+                 alt="Portrait of Afnaan Shafkat Sayyed"
+                 width="150"
+                 height="150"
+                 onerror="this.remove()">
+          </div>
+
           <div>
             <h2 id="glance-h">At a glance</h2>
             <p class="g-sub">Senior Cloud Engineer</p>
           </div>
         </div>
+
         <dl>
-          <div class="g-row"><dt>Employer</dt><dd>UnitedHealth Group</dd></div>
-          <div class="g-row"><dt>Experience</dt><dd>5+ years</dd></div>
-          <div class="g-row"><dt>Industries</dt><dd>Healthcare, banking, e-commerce</dd></div>
-          <div class="g-row"><dt>Platforms</dt><dd>AWS, Azure, Kubernetes (EKS, AKS)</dd></div>
-          <div class="g-row"><dt>Practices</dt><dd>Terraform, CI/CD, disaster recovery, cost optimization</dd></div>
-          <div class="g-row"><dt>Compliance</dt><dd>HIPAA, HITECH, PCI DSS, SOC 2, NIST</dd></div>
-          <div class="g-row"><dt>Based in</dt><dd>USA</dd></div>
+          <div class="g-row">
+            <dt>Employer</dt>
+            <dd>UnitedHealth Group</dd>
+          </div>
+          <div class="g-row">
+            <dt>Experience</dt>
+            <dd>5+ years</dd>
+          </div>
+          <div class="g-row">
+            <dt>Industries</dt>
+            <dd>Healthcare, banking, e-commerce</dd>
+          </div>
+          <div class="g-row">
+            <dt>Platforms</dt>
+            <dd>AWS, Azure, Kubernetes (EKS, AKS)</dd>
+          </div>
+          <div class="g-row">
+            <dt>Practices</dt>
+            <dd>Terraform, CI/CD, disaster recovery, cost optimization</dd>
+          </div>
+          <div class="g-row">
+            <dt>Compliance</dt>
+            <dd>HIPAA, HITECH, PCI DSS, SOC 2, NIST</dd>
+          </div>
+          <div class="g-row">
+            <dt>Based in</dt>
+            <dd>USA</dd>
+          </div>
         </dl>
       </aside>
+
     </div>
   </section>
 
+  <!-- RESULTS -->
   <section id="results">
     <div class="wrap">
+
       <div class="head">
         <span class="eyebrow">Results</span>
         <h2>Measured outcomes from platform work</h2>
         <p>Figures from my roles at UnitedHealth Group, Mphasis and Infosys.</p>
       </div>
+
       <div class="results">
-        <div class="res"><div class="n">50%</div><h3>Faster environment setup</h3><p>Reusable Terraform modules and Python automation across AWS accounts and Azure subscriptions.</p><span class="src">UnitedHealth Group</span></div>
-        <div class="res"><div class="n">35%</div><h3>Less deployment effort</h3><p>Standardized GitHub Actions and Azure DevOps pipelines with automated validation and security scanning.</p><span class="src">UnitedHealth Group</span></div>
-        <div class="res"><div class="n">99.9%</div><h3>Production availability target</h3><p>Containerized healthcare and ML workloads on EKS and AKS with autoscaling and health checks.</p><span class="src">UnitedHealth Group</span></div>
-        <div class="res"><div class="n">25%</div><h3>Faster incident resolution</h3><p>CloudWatch and Azure Monitor dashboards, alarms and root-cause analysis.</p><span class="src">UnitedHealth Group, Mphasis</span></div>
-        <div class="res"><div class="n">15%</div><h3>Lower cloud spend</h3><p>Rightsizing, autoscaling and removal of unused resources on AWS and Azure.</p><span class="src">UnitedHealth Group, Mphasis</span></div>
-        <div class="res"><div class="n">50+</div><h3>Banking servers migrated to AWS</h3><p>Phased on-premises cutovers with validated connectivity and documented rollback procedures.</p><span class="src">Mphasis</span></div>
+
+        <div class="res">
+          <div class="n">50%</div>
+          <h3>Faster environment setup</h3>
+          <p>Reusable Terraform modules and Python automation across AWS accounts and Azure subscriptions.</p>
+          <span class="src">UnitedHealth Group</span>
+        </div>
+
+        <div class="res">
+          <div class="n">35%</div>
+          <h3>Less deployment effort</h3>
+          <p>Standardized GitHub Actions and Azure DevOps pipelines with automated validation and security scanning.</p>
+          <span class="src">UnitedHealth Group</span>
+        </div>
+
+        <div class="res">
+          <div class="n">99.9%</div>
+          <h3>Production availability target</h3>
+          <p>Containerized healthcare and ML workloads on EKS and AKS with autoscaling and health checks.</p>
+          <span class="src">UnitedHealth Group</span>
+        </div>
+
+        <div class="res">
+          <div class="n">25%</div>
+          <h3>Faster incident resolution</h3>
+          <p>CloudWatch and Azure Monitor dashboards, alarms and root-cause analysis.</p>
+          <span class="src">UnitedHealth Group, Mphasis</span>
+        </div>
+
+        <div class="res">
+          <div class="n">15%</div>
+          <h3>Lower cloud spend</h3>
+          <p>Rightsizing, autoscaling and removal of unused resources on AWS and Azure.</p>
+          <span class="src">UnitedHealth Group, Mphasis</span>
+        </div>
+
+        <div class="res">
+          <div class="n">50+</div>
+          <h3>Banking servers migrated to AWS</h3>
+          <p>Phased on-premises cutovers with validated connectivity and documented rollback procedures.</p>
+          <span class="src">Mphasis</span>
+        </div>
+
       </div>
+
       <div class="compliance">
         <span>Security and audit work aligned with</span>
-        <b>HIPAA</b><b>HITECH</b><b>PCI DSS</b><b>SOC 2</b><b>NIST</b><b>CIS Benchmarks</b>
+        <b>HIPAA</b>
+        <b>HITECH</b>
+        <b>PCI DSS</b>
+        <b>SOC 2</b>
+        <b>NIST</b>
+        <b>CIS Benchmarks</b>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+
+      <div class="head">
+        <span class="eyebrow">Selected Projects</span>
+        <h2>Things I've built and explored</h2>
+        <p>
+          Hands-on projects spanning AWS architecture, infrastructure
+          automation, application development, monitoring and machine learning.
+        </p>
+      </div>
+
+      <div class="projects">
+
+        <article class="project">
+          <span class="project-type">Cloud · Serverless</span>
+          <h3>AWS Animal Crossing</h3>
+          <p>
+            An AWS-based project built around Animal Crossing data,
+            exploring cloud-hosted APIs and serverless application architecture.
+          </p>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">API Gateway</span>
+            <span class="tag">Lambda</span>
+            <span class="tag">DynamoDB</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/sayyedafnaan98-sa/AWSAnimalCrossing"
+             target="_blank" rel="noopener noreferrer">
+            View project on GitHub ↗
+          </a>
+        </article>
+
+        <article class="project">
+          <span class="project-type">Developer Tools · Database</span>
+          <h3>eDB — Embedded Multi-Model Database</h3>
+          <p>
+            An embedded database project exploring multiple data models
+            through a Python-based engine, API layer and web-based database manager.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/sayyedafnaan98-sa/eDB"
+             target="_blank" rel="noopener noreferrer">
+            View project on GitHub ↗
+          </a>
+        </article>
+
+        <article class="project">
+          <span class="project-type">DevOps · Deployment</span>
+          <h3>Blue-Green Deployments for ECS</h3>
+          <p>
+            A project exploring blue-green deployment approaches for
+            Amazon ECS workloads, with an emphasis on safer releases
+            and deployment reliability.
+          </p>
+          <div class="tags">
+            <span class="tag">AWS</span>
+            <span class="tag">Amazon ECS</span>
+            <span class="tag">Blue-Green</span>
+            <span class="tag">DevOps</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/sayyedafnaan98-sa/blue-green-deployments-ecs"
+             target="_blank" rel="noopener noreferrer">
+            View project on GitHub ↗
+          </a>
+        </article>
+
+        <article class="project">
+          <span class="project-type">Cloud · Observability</span>
+          <h3>Application Health Monitoring</h3>
+          <p>
+            An infrastructure-as-code project using VPC Lattice and
+            CloudWatch to monitor application health and support
+            automated operational responses.
+          </p>
+          <div class="tags">
+            <span class="tag">VPC Lattice</span>
+            <span class="tag">CloudWatch</span>
+            <span class="tag">Lambda</span>
+            <span class="tag">SNS</span>
+            <span class="tag">Terraform</span>
+            <span class="tag">CDK</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/sayyedafnaan98-sa/application-health-monitoring-lattice-cloudwatch"
+             target="_blank" rel="noopener noreferrer">
+            View project on GitHub ↗
+          </a>
+        </article>
+
+        <article class="project">
+          <span class="project-type">Machine Learning · Cloud</span>
+          <h3>Mobile Price Predictor</h3>
+          <p>
+            A machine-learning web application that predicts smartphone
+            price categories, with model deployment and supporting
+            services on Amazon SageMaker.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Amazon SageMaker</span>
+          </div>
+          <a class="project-link"
+             href="https://github.com/sayyedafnaan98-sa/Mobile-Price-Predictor-using-AWS-Sagemaker"
+             target="_blank" rel="noopener noreferrer">
+            View project on GitHub ↗
+          </a>
+        </article>
+
       </div>
     </div>
   </section>
 
+  <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
+
       <div class="head">
         <span class="eyebrow">Experience</span>
         <h2>From e-commerce to banking to healthcare</h2>
         <p>5+ years of cloud engineering across India and the USA.</p>
       </div>
+
       <div class="roles">
+
         <article class="role-row">
           <div class="meta">
             <h3>Senior Cloud Engineer</h3>
             <div class="co">UnitedHealth Group, USA</div>
-            <div class="when"><span>June 2025 to present</span><span class="now">Current</span></div>
+            <div class="when">
+              <span>June 2025 to present</span>
+              <span class="now">Current</span>
+            </div>
           </div>
+
           <div>
             <ul>
               <li>Engineered AWS and Azure infrastructure for healthcare applications, claims processing, analytics and AI/ML workloads across development, testing, staging and production, improving deployment consistency and scalability.</li>
@@ -262,15 +1051,29 @@ footer a:hover{color:var(--ink)}
               <li>Integrated Amazon CloudWatch and Azure Monitor for infrastructure health, application performance and alerting, reducing mean time to resolve incidents by <strong>25%</strong>.</li>
               <li>Implemented AWS Backup and Azure Backup with documented recovery runbooks, targeting a 15-minute RPO and 4-hour RTO for critical workloads, and cut compute and storage spend by <strong>15%</strong> through rightsizing and autoscaling.</li>
             </ul>
-            <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Terraform</span><span class="tag">Python</span><span class="tag">EKS / AKS</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">SageMaker</span><span class="tag">Databricks</span><span class="tag">Key Vault</span></div>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Azure</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Python</span>
+              <span class="tag">EKS / AKS</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Azure DevOps</span>
+              <span class="tag">SageMaker</span>
+              <span class="tag">Databricks</span>
+              <span class="tag">Key Vault</span>
+            </div>
           </div>
         </article>
+
         <article class="role-row">
           <div class="meta">
             <h3>Cloud Engineer</h3>
             <div class="co">Mphasis, India</div>
-            <div class="when"><span>July 2022 to Aug 2024</span></div>
+            <div class="when">July 2022 to Aug 2024</div>
           </div>
+
           <div>
             <ul>
               <li>Executed phased migration of <strong>50+</strong> banking application servers from on-premises data centers to AWS using AWS Application Migration Service, EC2 and VPC, with validated connectivity and documented rollback procedures.</li>
@@ -283,15 +1086,28 @@ footer a:hover{color:var(--ink)}
               <li>Wrote Python and Bash scripts that analyze CloudWatch metrics to flag CPU and memory spikes and recurring bottlenecks, enabling proactive capacity adjustments.</li>
               <li>Maintained disaster recovery readiness by validating EBS snapshots and AWS Backup jobs, documenting recovery procedures and joining failover tests against RTO and RPO requirements.</li>
             </ul>
-            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">AWS MGN</span><span class="tag">DMS</span><span class="tag">Jenkins</span><span class="tag">CloudWatch</span><span class="tag">KMS</span><span class="tag">CloudTrail</span></div>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">CloudFormation</span>
+              <span class="tag">AWS MGN</span>
+              <span class="tag">DMS</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">CloudWatch</span>
+              <span class="tag">KMS</span>
+              <span class="tag">CloudTrail</span>
+            </div>
           </div>
         </article>
+
         <article class="role-row">
           <div class="meta">
             <h3>Cloud Engineer</h3>
             <div class="co">Infosys, India</div>
-            <div class="when"><span>Oct 2020 to June 2022</span></div>
+            <div class="when">Oct 2020 to June 2022</div>
           </div>
+
           <div>
             <ul>
               <li>Provisioned and managed AWS infrastructure (EC2, VPC, subnets, security groups, Application Load Balancer, Auto Scaling) to host scalable e-commerce workloads and absorb seasonal traffic.</li>
@@ -303,118 +1119,276 @@ footer a:hover{color:var(--ink)}
               <li>Enforced cloud security with IAM policies, network ACLs, security groups, encryption and OS patching, and kept audit evidence for PCI DSS controls in payment-card environments.</li>
               <li>Performed root cause analysis on production incidents and documented corrective actions in runbooks to reduce repeat escalations.</li>
             </ul>
-            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">Jenkins</span><span class="tag">Maven</span><span class="tag">RDS</span><span class="tag">Route 53</span><span class="tag">CloudWatch</span></div>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">CloudFormation</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag">Maven</span>
+              <span class="tag">RDS</span>
+              <span class="tag">Route 53</span>
+              <span class="tag">CloudWatch</span>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <div class="wrap">
+
       <div class="head">
         <span class="eyebrow">Skills</span>
         <h2>Tools and practices</h2>
         <p>Grouped by the job they do, from landing zones to incident response.</p>
       </div>
+
       <div class="stack">
+
         <div class="grp">
           <h3>Cloud platforms</h3>
           <ul class="chips">
-            <li>AWS</li><li>Microsoft Azure</li><li>GCP</li><li>EC2</li><li>S3</li><li>VPC</li><li>IAM</li><li>Lambda</li><li>EKS</li><li>ECS</li><li>AKS</li><li>RDS</li><li>DynamoDB</li><li>CloudFront</li><li>Route 53</li><li>KMS</li><li>Secrets Manager</li>
+            <li>AWS</li><li>Microsoft Azure</li><li>GCP</li>
+            <li>EC2</li><li>S3</li><li>VPC</li><li>IAM</li>
+            <li>Lambda</li><li>EKS</li><li>ECS</li><li>AKS</li>
+            <li>RDS</li><li>DynamoDB</li><li>CloudFront</li>
+            <li>Route 53</li><li>KMS</li><li>Secrets Manager</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Infrastructure as code and automation</h3>
           <ul class="chips">
-            <li>Terraform</li><li>CloudFormation</li><li>Azure Bicep</li><li>Ansible</li><li>Python</li><li>Bash</li><li>PowerShell</li><li>AWS CLI</li><li>Azure CLI</li><li>Policy as Code</li>
+            <li>Terraform</li><li>CloudFormation</li>
+            <li>Azure Bicep</li><li>Ansible</li><li>Python</li>
+            <li>Bash</li><li>PowerShell</li><li>AWS CLI</li>
+            <li>Azure CLI</li><li>Policy as Code</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>DevOps and CI/CD</h3>
           <ul class="chips">
-            <li>Jenkins</li><li>GitHub Actions</li><li>GitLab CI/CD</li><li>Azure DevOps</li><li>Git</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>Kustomize</li><li>Argo CD</li><li>GitOps</li><li>Blue-green and canary releases</li>
+            <li>Jenkins</li><li>GitHub Actions</li>
+            <li>GitLab CI/CD</li><li>Azure DevOps</li>
+            <li>Git</li><li>Docker</li><li>Kubernetes</li>
+            <li>Helm</li><li>Kustomize</li><li>Argo CD</li>
+            <li>GitOps</li><li>Blue-green and canary releases</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Networking and architecture</h3>
           <ul class="chips">
-            <li>VPC and VNet design</li><li>DNS</li><li>VPN</li><li>Load balancing</li><li>Private endpoints</li><li>Hybrid and multi-cloud</li><li>Microservices</li><li>Serverless</li><li>Cloud migration</li><li>Landing zones</li><li>Multi-region architecture</li>
+            <li>VPC and VNet design</li><li>DNS</li><li>VPN</li>
+            <li>Load balancing</li><li>Private endpoints</li>
+            <li>Hybrid and multi-cloud</li><li>Microservices</li>
+            <li>Serverless</li><li>Cloud migration</li>
+            <li>Landing zones</li><li>Multi-region architecture</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Security and compliance</h3>
           <ul class="chips">
-            <li>IAM and RBAC</li><li>SSO</li><li>HashiCorp Vault</li><li>Encryption</li><li>Vulnerability scanning</li><li>DevSecOps</li><li>Zero Trust</li><li>AWS Organizations</li><li>Azure Policy</li><li>HIPAA</li><li>HITECH</li><li>PCI DSS</li><li>SOC 2</li><li>NIST</li><li>CIS Benchmarks</li>
+            <li>IAM and RBAC</li><li>SSO</li>
+            <li>HashiCorp Vault</li><li>Encryption</li>
+            <li>Vulnerability scanning</li><li>DevSecOps</li>
+            <li>Zero Trust</li><li>AWS Organizations</li>
+            <li>Azure Policy</li><li>HIPAA</li><li>HITECH</li>
+            <li>PCI DSS</li><li>SOC 2</li><li>NIST</li>
+            <li>CIS Benchmarks</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Monitoring and reliability</h3>
           <ul class="chips">
-            <li>CloudWatch</li><li>Azure Monitor</li><li>Prometheus</li><li>Grafana</li><li>Splunk</li><li>Datadog</li><li>ELK Stack</li><li>OpenTelemetry</li><li>Distributed tracing</li><li>Incident management</li><li>Root cause analysis</li><li>SLOs and SLIs</li><li>Disaster recovery</li><li>Backup and recovery</li>
+            <li>CloudWatch</li><li>Azure Monitor</li>
+            <li>Prometheus</li><li>Grafana</li><li>Splunk</li>
+            <li>Datadog</li><li>ELK Stack</li>
+            <li>OpenTelemetry</li><li>Distributed tracing</li>
+            <li>Incident management</li><li>Root cause analysis</li>
+            <li>SLOs and SLIs</li><li>Disaster recovery</li>
+            <li>Backup and recovery</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Cloud operations and FinOps</h3>
           <ul class="chips">
-            <li>Linux</li><li>Windows Server</li><li>Nginx</li><li>Apache</li><li>ITIL</li><li>Patch management</li><li>Capacity planning</li><li>AWS Cost Explorer</li><li>Azure Cost Management</li><li>Rightsizing</li>
+            <li>Linux</li><li>Windows Server</li><li>Nginx</li>
+            <li>Apache</li><li>ITIL</li><li>Patch management</li>
+            <li>Capacity planning</li><li>AWS Cost Explorer</li>
+            <li>Azure Cost Management</li><li>Rightsizing</li>
           </ul>
         </div>
+
         <div class="grp">
           <h3>Data, integration and domains</h3>
           <ul class="chips">
-            <li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>Oracle</li><li>Redis</li><li>Database migration</li><li>REST APIs</li><li>API Gateway</li><li>Event-driven architecture</li><li>HL7</li><li>FHIR</li><li>EHR/EMR integration</li><li>Payment processing</li>
+            <li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li>
+            <li>Oracle</li><li>Redis</li><li>Database migration</li>
+            <li>REST APIs</li><li>API Gateway</li>
+            <li>Event-driven architecture</li><li>HL7</li>
+            <li>FHIR</li><li>EHR/EMR integration</li>
+            <li>Payment processing</li>
           </ul>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- CERTIFICATIONS -->
   <section id="certifications">
     <div class="wrap">
+
       <div class="head">
         <span class="eyebrow">Certifications</span>
         <h2>Microsoft certified in DevOps, identity and compliance</h2>
       </div>
+
       <div class="list">
-        <div class="list-row"><div class="when">AZ-400</div><div><h3>DevOps Engineer Expert</h3><p>Microsoft Certified</p></div></div>
-        <div class="list-row"><div class="when">AZ-204</div><div><h3>Azure Developer Associate</h3><p>Microsoft Certified</p></div></div>
-        <div class="list-row"><div class="when">SC-300</div><div><h3>Identity and Access Administrator Associate</h3><p>Microsoft Certified</p></div></div>
-        <div class="list-row"><div class="when">SC-400</div><div><h3>Information Protection and Compliance Administrator Associate</h3><p>Microsoft Certified</p></div></div>
+        <div class="list-row">
+          <div class="when">AZ-400</div>
+          <div>
+            <h3>DevOps Engineer Expert</h3>
+            <p>Microsoft Certified</p>
+          </div>
+        </div>
+
+        <div class="list-row">
+          <div class="when">AZ-204</div>
+          <div>
+            <h3>Azure Developer Associate</h3>
+            <p>Microsoft Certified</p>
+          </div>
+        </div>
+
+        <div class="list-row">
+          <div class="when">SC-300</div>
+          <div>
+            <h3>Identity and Access Administrator Associate</h3>
+            <p>Microsoft Certified</p>
+          </div>
+        </div>
+
+        <div class="list-row">
+          <div class="when">SC-400</div>
+          <div>
+            <h3>Information Protection and Compliance Administrator Associate</h3>
+            <p>Microsoft Certified</p>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
+  <!-- EDUCATION -->
   <section id="education">
     <div class="wrap">
+
       <div class="head">
         <span class="eyebrow">Education</span>
         <h2>Information systems and engineering</h2>
       </div>
+
       <div class="list">
-        <div class="list-row"><div class="when">Master's degree</div><div><h3>Master's in Information Systems</h3><p>DePaul University, IL, USA</p></div></div>
-        <div class="list-row"><div class="when">Bachelor's degree</div><div><h3>Bachelor of Engineering in Mechanical Engineering</h3><p>Vishwakarma Institute of Information Technology, India</p></div></div>
+        <div class="list-row">
+          <div class="when">Master's degree</div>
+          <div>
+            <h3>Master's in Information Systems</h3>
+            <p>DePaul University, IL, USA</p>
+          </div>
+        </div>
+
+        <div class="list-row">
+          <div class="when">Bachelor's degree</div>
+          <div>
+            <h3>Bachelor of Engineering in Mechanical Engineering</h3>
+            <p>Vishwakarma Institute of Information Technology, India</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact">
+
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:1rem">Get in touch.</h2>
+        <p class="lead">
+          For cloud engineering roles, platform work or project discussions,
+          send a message and I will reply.
+        </p>
+      </div>
+
+      <div class="rows">
+
+        <div class="crow">
+          <span class="l">Email</span>
+          <a class="val" id="v-email"
+             href="mailto:sayyedafnaan98@gmail.com">
+            sayyedafnaan98@gmail.com
+          </a>
+          <button type="button" data-copy="v-email">Copy</button>
+        </div>
+
+        <div class="crow">
+          <span class="l">Phone</span>
+          <a class="val" id="v-phone"
+             href="tel:+18722210042">
+            872-221-0042
+          </a>
+          <button type="button" data-copy="v-phone">Copy</button>
+        </div>
+
+        <div class="crow">
+          <span class="l">LinkedIn</span>
+          <a class="val"
+             href="https://www.linkedin.com/in/afnaan87"
+             target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/afnaan87
+          </a>
+          <span></span>
+        </div>
+
+        <div class="crow">
+          <span class="l">GitHub</span>
+          <a class="val"
+             href="https://github.com/sayyedafnaan98-sa"
+             target="_blank" rel="noopener noreferrer">
+            github.com/sayyedafnaan98-sa
+          </a>
+          <span></span>
+        </div>
+
+        <div class="crow">
+          <span class="l">Resume</span>
+          <a class="val" href="RESUME.pdf" download>Download PDF</a>
+          <span></span>
+        </div>
+
+        <div class="crow">
+          <span class="l">Location</span>
+          <span class="val">USA</span>
+          <span></span>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section id="contact">
-    <div class="wrap contact">
-      <div>
-        <span class="eyebrow">Contact</span>
-        <h2 style="margin-top:1rem">Get in touch.</h2>
-        <p class="lead">For cloud engineering roles, platform work or project discussions, send a message and I will reply.</p>
-      </div>
-      <div class="rows">
-        <div class="crow"><span class="l">Email</span><a class="val" id="v-email" href="mailto:sayyedafnaan98@gmail.com">sayyedafnaan98@gmail.com</a><button type="button" data-copy="v-email">Copy</button></div>
-        <div class="crow"><span class="l">Phone</span><a class="val" id="v-phone" href="tel:+18722210042">872-221-0042</a><button type="button" data-copy="v-phone">Copy</button></div>
-        <div class="crow"><span class="l">LinkedIn</span><a class="val" href="https://www.linkedin.com/in/afnaan87" target="_blank" rel="noopener noreferrer">linkedin.com/in/afnaan87</a><span></span></div>
-        <div class="crow"><span class="l">GitHub</span><a class="val" href="https://github.com/sayyedafnaan98-sa" target="_blank" rel="noopener noreferrer">github.com/sayyedafnaan98-sa</a><span></span></div>
-        <div class="crow"><span class="l">Resume</span><a class="val" href="RESUME.pdf" download>Download PDF</a><span></span></div>
-        <div class="crow"><span class="l">Location</span><span class="val">USA</span><span></span></div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer class="wrap">
@@ -423,20 +1397,44 @@ footer a:hover{color:var(--ink)}
 </footer>
 
 <script>
-(function(){
-  document.querySelectorAll('button[data-copy]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var el=document.getElementById(b.getAttribute('data-copy'));
-      var done=function(t){var o=b.textContent;b.textContent=t;setTimeout(function(){b.textContent=o},1600)};
-      var fallback=function(){
-        try{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected')}catch(e){}
+(function () {
+  document.querySelectorAll('button[data-copy]').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var element = document.getElementById(
+        button.getAttribute('data-copy')
+      );
+
+      var done = function (message) {
+        var original = button.textContent;
+        button.textContent = message;
+        setTimeout(function () {
+          button.textContent = original;
+        }, 1600);
       };
-      try{
-        navigator.clipboard.writeText(el.textContent.trim()).then(function(){done('Copied')},fallback);
-      }catch(e){fallback()}
+
+      var fallback = function () {
+        try {
+          var range = document.createRange();
+          range.selectNodeContents(element);
+          var selection = getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          done('Selected');
+        } catch (error) {}
+      };
+
+      try {
+        navigator.clipboard.writeText(element.textContent.trim())
+          .then(function () {
+            done('Copied');
+          }, fallback);
+      } catch (error) {
+        fallback();
+      }
     });
   });
 })();
 </script>
+
 </body>
 </html>
