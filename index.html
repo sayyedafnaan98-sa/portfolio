@@ -3,287 +3,440 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalyan Kasha | Cloud/DevOps Engineer Portfolio</title>
-<meta name="description" content="Kalyan Kasha — Cloud/DevOps Engineer with 4+ years of experience across AWS and Azure: landing zones, Terraform, Kubernetes (EKS/AKS), GitOps and DevSecOps for financial services and e-commerce.">
-<meta name="keywords" content="Kalyan Kasha, Cloud Engineer, DevOps Engineer, AWS, Azure, Terraform, Kubernetes, GitOps, Python, Portfolio">
-<meta name="author" content="Kalyan Kasha">
-<meta property="og:title" content="Kalyan Kasha | Cloud/DevOps Engineer Portfolio">
-<meta property="og:description" content="Cloud/DevOps Engineer with expertise in AWS, Azure, Terraform, Kubernetes, GitOps and secure cloud infrastructure.">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/291906544?v=4">
-<meta name="twitter:card" content="summary_large_image">
+<title>Afnaan Shafkat Sayyed</title>
+<meta name="description" content="Afnaan Shafkat Sayyed, Senior Cloud Engineer with 5+ years on AWS and Azure across healthcare, banking and e-commerce: Terraform, Kubernetes, CI/CD, security and disaster recovery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#050816;--card:rgba(255,255,255,.05);--a:#4F8CFF;--b:#7B61FF;--c:#00D4FF;--g:#00FFA3;--t:#fff;--m:#9ca3af;--bd:rgba(255,255,255,.08)}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden;line-height:1.6}
-.aur{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(600px 600px at 0 0,rgba(79,140,255,.15),transparent),radial-gradient(500px 500px at 100% 40%,rgba(123,97,255,.14),transparent),radial-gradient(400px 400px at 40% 100%,rgba(0,212,255,.1),transparent)}
-main,nav,footer{position:relative;z-index:1}
-.g{background:linear-gradient(135deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-h1,h2,h3,.logo{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
-nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:14px 0;transition:.3s}
-nav.s{background:rgba(5,8,22,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
-.in{max-width:1180px;margin:0 auto;padding:0 28px}
-.nv{display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.5rem;font-weight:700;text-decoration:none}
-.links{display:flex;gap:26px;list-style:none}
-.links a{color:var(--m);text-decoration:none;font-size:.875rem;font-weight:500;transition:.3s}
-.links a:hover{color:var(--t)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 0 24px rgba(79,140,255,.35);transition:.3s;border:0;cursor:pointer}
-.btn:hover{transform:translateY(-2px)}
-.btn.o{background:transparent;border:1px solid var(--bd);box-shadow:none}
-.btn.o:hover{border-color:var(--a)}
-section{padding:100px 0}
-#home{min-height:100vh;display:flex;align-items:center;padding-top:90px}
-.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
-.hero h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.1;margin-bottom:14px}
-.typed{font-size:1.25rem;color:var(--m);min-height:2rem;margin-bottom:18px}
-.typed b{color:var(--a)}
-.hero p.d{color:var(--m);max-width:540px;margin-bottom:30px}
-.row{display:flex;gap:14px;flex-wrap:wrap}
-.stats{display:flex;gap:36px;margin-top:40px;padding-top:34px;border-top:1px solid var(--bd)}
-.stats b{display:block;font-family:'Space Grotesk';font-size:2rem}
-.stats span{font-size:.8rem;color:var(--m)}
-.av{width:300px;height:300px;border-radius:50%;padding:3px;margin:auto;background:conic-gradient(var(--a),var(--b),var(--c),var(--a));animation:sp 6s linear infinite}
-.av div{width:100%;height:100%;border-radius:50%;background:var(--bg);overflow:hidden;animation:sp 6s linear infinite reverse}
-.av img{width:100%;height:100%;object-fit:cover}
-@keyframes sp{to{transform:rotate(360deg)}}
-.lab{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
-.ttl{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
-.sub{color:var(--m);max-width:620px;margin-bottom:46px}
-.about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
-.about p{color:var(--m);margin-bottom:16px}
-.hl{display:grid;grid-template-columns:1fr 1fr;gap:10px;color:var(--m);font-size:.875rem;margin-top:22px}
-.hl i{color:var(--a);margin-right:8px}
-.tl{border-left:1px solid var(--a);padding-left:24px}
-.tl div{position:relative;padding-bottom:28px}
-.tl div::before{content:'';position:absolute;left:-30px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}
-.tl small{color:var(--a);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
-.tl h3{font-size:1rem}
-.tl em{display:block;color:var(--b);font-style:normal;font-size:.85rem}
-.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px}
-.tab{background:var(--card);border:1px solid var(--bd);color:var(--m);padding:8px 18px;border-radius:50px;font-size:.85rem;cursor:pointer;font-family:inherit;transition:.3s}
-.tab.on,.tab:hover{background:rgba(79,140,255,.15);border-color:var(--a);color:var(--a)}
-.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
-.sk{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px 12px;text-align:center;transition:.3s}
-.sk:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 16px 40px rgba(79,140,255,.18)}
-.sk i{font-style:normal;font-size:1.8rem;display:block;margin-bottom:8px}
-.sk b{font-size:.8rem;display:block}
-.sk span{font-size:.7rem;color:var(--a)}
-.ex{display:flex;flex-direction:column;gap:26px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:34px;position:relative;transition:.3s}
-.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--a),var(--b))}
-.card:hover{transform:translateY(-4px);border-color:rgba(79,140,255,.3)}
-.eh{display:flex;gap:16px;margin-bottom:18px;align-items:center}
-.eh .lg{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:flex;align-items:center;justify-content:center;font-size:1.4rem}
-.eh h3{font-size:1.2rem}
-.eh .co{color:var(--a);font-weight:600}
-.eh small{color:var(--m)}
-.bdg{background:rgba(0,255,163,.1);border:1px solid rgba(0,255,163,.3);color:var(--g);font-size:.65rem;font-weight:700;padding:2px 10px;border-radius:50px;margin-left:6px}
-.card ul{list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--m);font-size:.9rem}
-.card li::before{content:'▸ ';color:var(--a)}
-.card li b{color:var(--t)}
-.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--bd)}
-.tg{background:rgba(79,140,255,.1);border:1px solid rgba(79,140,255,.2);color:var(--a);font-size:.72rem;font-weight:600;padding:3px 11px;border-radius:50px}
-.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
-.pc{background:var(--card);border:1px solid var(--bd);border-radius:22px;overflow:hidden;transition:.4s;display:flex;flex-direction:column}
-.pc:hover{transform:translateY(-8px);border-color:rgba(79,140,255,.4);box-shadow:0 24px 60px rgba(79,140,255,.15)}
-.ph{height:110px;display:flex;align-items:center;justify-content:center;font-size:3rem}
-.pb{padding:22px;display:flex;flex-direction:column;flex:1}
-.pb small{color:var(--a);font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
-.pb h3{font-size:1.05rem;margin:6px 0 8px}
-.pb p{color:var(--m);font-size:.85rem;margin-bottom:14px;flex:1}
-.pb a{color:var(--a);text-decoration:none;font-size:.82rem;font-weight:600;margin-top:14px}
-.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
-.ac{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:28px;transition:.3s}
-.ac:hover{transform:translateY(-6px);border-color:rgba(79,140,255,.3)}
-.ac .ic{font-size:1.7rem;margin-bottom:12px}
-.ac h3{font-size:1.05rem;margin-bottom:6px}
-.ac p{color:var(--m);font-size:.85rem}
-.ac .n{font-family:'Space Grotesk';font-size:1.6rem;font-weight:700;margin-top:10px;background:linear-gradient(135deg,var(--a),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.ci{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--t);background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px 22px;transition:.3s}
-a.ci:hover{border-color:var(--a);transform:translateX(6px)}
-.ci i{width:42px;height:42px;border-radius:12px;background:rgba(79,140,255,.15);display:flex;align-items:center;justify-content:center;color:var(--a)}
-.ci small{display:block;color:var(--m);font-size:.72rem}
-.ci b{font-size:.92rem}
-footer{border-top:1px solid var(--bd);padding:34px 0;color:var(--m);font-size:.875rem}
-footer .in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-@media(max-width:900px){.hero,.about{grid-template-columns:1fr}.av{display:none}.links{display:none}.hl{grid-template-columns:1fr}.stats{flex-wrap:wrap;gap:22px}section{padding:76px 0}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:root{
+  color-scheme:light;
+  --bg:#F6F7F9;
+  --surface:#FFFFFF;
+  --ink:#101B33;
+  --muted:#55607A;
+  --line:#D9DEE7;
+  --accent:#1F43A0;
+  --accent-ink:#FFFFFF;
+  --tint:rgba(31,67,160,.08);
+  --mark:#A8741A;
+  --font-display:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --font-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0C1424;--surface:#121C31;--ink:#E9EDF5;--muted:#A3AEC4;--line:#26324B;
+    --accent:#8FB0F5;--accent-ink:#0A1630;--tint:rgba(143,176,245,.12);--mark:#D9A441;
+    color-scheme:dark;
+  }
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--font-body);font-size:1rem;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.12;letter-spacing:-.015em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.wrap{max-width:1120px;margin-inline:auto}
+.eyebrow{font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+
+/* header */
+header{position:sticky;top:0;z-index:9;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.85rem}
+.logo{font-family:var(--font-display);font-weight:600;font-size:1.2rem;letter-spacing:-.01em;text-decoration:none}
+nav ul{display:flex;gap:1.8rem;list-style:none;margin:0;padding:0}
+nav a{font-size:.9rem;color:var(--muted);text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.72rem 1.3rem;border-radius:4px;font-weight:600;font-size:.92rem;text-decoration:none;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;transition:background .2s,border-color .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.primary:hover{filter:brightness(1.1);background:var(--accent);color:var(--accent-ink)}
+.btn.sm{padding:.5rem 1rem;font-size:.85rem}
+
+/* sections */
+section{padding-block:clamp(3.5rem,8vw,6.5rem);border-top:1px solid var(--line)}
+section.first{border-top:0}
+.head{display:flex;flex-direction:column;gap:.8rem;margin-bottom:clamp(2rem,4vw,3.2rem);max-width:44rem}
+.head h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:600}
+.head p{color:var(--muted);max-width:60ch}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:600;letter-spacing:-.03em;line-height:1.02;margin:1rem 0 1.4rem}
+.hero .role{font-family:var(--font-display);font-size:clamp(1.25rem,2.3vw,1.6rem);font-weight:500;letter-spacing:-.01em;max-width:30ch;text-wrap:balance;color:var(--ink)}
+.hero .lead{color:var(--muted);max-width:58ch;margin:1.2rem 0 2rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.glance{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:1.6rem 1.7rem 1.2rem;min-width:0}
+.glance-top{display:flex;align-items:center;gap:1.1rem;padding-bottom:1.2rem;border-bottom:2px solid var(--mark)}
+.avatar{position:relative;width:92px;height:92px;flex:none;border-radius:50%;overflow:hidden;background:var(--tint);border:1px solid var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:600;font-size:1.9rem;color:var(--accent);letter-spacing:-.02em}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.glance h2{font-family:var(--font-body);font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.glance .g-sub{font-family:var(--font-display);font-size:1.25rem;font-weight:600;letter-spacing:-.01em;margin-top:.25rem;line-height:1.2}
+.glance dl{margin:0}
+.glance .g-row{display:grid;grid-template-columns:6.5rem minmax(0,1fr);gap:1rem;padding-block:.85rem;border-bottom:1px solid var(--line)}
+.glance .g-row:last-child{border-bottom:0}
+.glance dt{font-size:.82rem;color:var(--muted)}
+.glance dd{margin:0;font-weight:500;font-size:.95rem}
+
+/* results */
+.results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2.6rem 2.8rem}
+.res{border-top:2px solid var(--ink);padding-top:1.1rem;min-width:0}
+.res .n{font-family:var(--font-display);font-weight:600;font-size:clamp(2.8rem,5vw,3.7rem);letter-spacing:-.03em;line-height:1;color:var(--accent);font-variant-numeric:tabular-nums}
+.res h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;margin:.8rem 0 .35rem;letter-spacing:0}
+.res p{color:var(--muted);font-size:.92rem}
+.res .src{display:block;margin-top:.8rem;font-size:.74rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.compliance{margin-top:3rem;padding-top:1.4rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;align-items:center;color:var(--muted);font-size:.92rem}
+.compliance b{color:var(--ink);font-weight:600}
+
+/* experience */
+.roles{display:flex;flex-direction:column}
+.role-row{display:grid;grid-template-columns:minmax(0,270px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:2.4rem;border-top:1px solid var(--line)}
+.role-row:first-child{border-top:0;padding-top:0}
+.meta h3{font-size:1.5rem;font-weight:600;margin-bottom:.35rem}
+.meta .co{font-weight:600;color:var(--accent)}
+.meta .when{font-size:.86rem;color:var(--muted);margin-top:.3rem;display:flex;gap:.6rem;align-items:center;flex-wrap:wrap}
+.now{background:var(--tint);color:var(--accent);padding:.1rem .6rem;border-radius:99px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.role-row ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.85rem}
+.role-row li{position:relative;padding-left:1.3rem;color:var(--muted);max-width:68ch}
+.role-row li::before{content:"";position:absolute;left:0;top:.68em;width:.42rem;height:.42rem;background:var(--mark)}
+.role-row li strong{color:var(--ink);font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:1.4rem}
+.tag{font-size:.76rem;padding:.2rem .65rem;border:1px solid var(--line);border-radius:3px;color:var(--muted);font-weight:500}
+
+/* skills */
+.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2.6rem 3.5rem}
+.grp h3{font-family:var(--font-body);font-size:1.02rem;font-weight:600;margin-bottom:.9rem;letter-spacing:0}
+.chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.chips li{font-size:.88rem;padding:.3rem .8rem;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink)}
+
+/* certifications and education */
+.list{display:flex;flex-direction:column;border-top:2px solid var(--ink)}
+.list-row{display:grid;grid-template-columns:minmax(0,270px) minmax(0,1fr);gap:clamp(1.5rem,4vw,3.5rem);padding-block:1.4rem;border-bottom:1px solid var(--line)}
+.list-row .when{font-size:.9rem;color:var(--muted);font-variant-numeric:tabular-nums;font-weight:500}
+.list-row h3{font-size:1.2rem;font-weight:600}
+.list-row p{color:var(--muted);font-size:.95rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:start}
+.contact h2{font-size:clamp(2.4rem,5.5vw,3.8rem);font-weight:600;letter-spacing:-.03em;line-height:1.02}
+.contact .lead{color:var(--muted);margin-top:1.2rem;max-width:44ch}
+.rows{border-top:2px solid var(--ink);min-width:0}
+.crow{display:grid;grid-template-columns:5.5rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding-block:1rem;border-bottom:1px solid var(--line)}
+.crow .l{font-size:.74rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:500}
+.crow .val{font-weight:500;overflow-wrap:anywhere}
+.crow a.val{text-decoration:none}
+.crow a.val:hover{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
+.crow button{font-family:var(--font-body);font-size:.78rem;font-weight:500;padding:.3rem .75rem;border:1px solid var(--line);border-radius:3px;background:transparent;color:var(--muted);cursor:pointer}
+.crow button:hover{border-color:var(--ink);color:var(--ink)}
+
+footer{border-top:1px solid var(--line);padding-block:1.8rem 2.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--muted);font-size:.85rem}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+
+@media (max-width:900px){
+  .hero,.contact{grid-template-columns:minmax(0,1fr)}
+  .results{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .role-row,.list-row{grid-template-columns:minmax(0,1fr);gap:1.2rem}
+  .list-row{gap:.3rem}
+  .stack{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:760px){
+  nav{display:none}
+}
+@media (max-width:520px){
+  .results{grid-template-columns:minmax(0,1fr)}
+  .crow{grid-template-columns:minmax(0,1fr) auto}
+  .crow .l{grid-column:1 / -1}
+  .glance .g-row{grid-template-columns:minmax(0,1fr);gap:.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
 </style>
 </head>
 <body>
-<div class="aur"></div>
-<nav id="nb"><div class="in nv">
-  <a href="#home" class="logo g">KK</a>
-  <ul class="links">
-    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
-    <li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
-  </ul>
-  <a href="mailto:kalyankasha2302@gmail.com" class="btn">Hire Me</a>
-</div></nav>
 
-<main>
-<section id="home"><div class="in hero">
-  <div>
-    <h1>Hi, I'm <span class="g">Kalyan</span><br>Cloud/DevOps Engineer</h1>
-    <div class="typed"><b id="ty"></b>|</div>
-    <p class="d">Cloud/DevOps Engineer with 4+ years of experience designing, automating and securing cloud infrastructure on AWS and Azure for financial services and e-commerce. Expert in Terraform, Kubernetes, GitOps and DevSecOps.</p>
-    <div class="row"><a href="#projects" class="btn"><i class="fas fa-rocket"></i> View Projects</a><a href="mailto:kalyankasha2302@gmail.com" class="btn o"><i class="fas fa-paper-plane"></i> Contact Me</a></div>
-    <div class="stats">
-      <div><b class="g">4+</b><span>Years Experience</span></div>
-      <div><b class="g">99.99%</b><span>Platform Availability</span></div>
-      <div><b class="g">80%</b><span>Less Manual Deploy Effort</span></div>
-    </div>
-  </div>
-  <div class="av"><div><img src="https://avatars.githubusercontent.com/u/291906544?v=4" alt="Kalyan Kasha" onerror="this.remove()"></div></div>
-</div></section>
-
-<section id="about"><div class="in about">
-  <div>
-    <div class="lab">About</div>
-    <h2 class="ttl">Building secure <span class="g">cloud platforms</span></h2>
-    <p>I'm Kalyan Kasha, a Cloud/DevOps Engineer based in California, USA, with 4+ years of experience designing, automating and managing secure cloud infrastructure across AWS and Azure. Currently at Morgan Stanley, I build enterprise cloud landing zones and platforms for trading, risk and wealth management in a regulated environment.</p>
-    <p>My work spans Infrastructure as Code with Terraform and Terragrunt, Kubernetes on EKS and AKS, CI/CD and GitOps with Jenkins, GitHub Actions, Argo CD and Helm, plus cloud security, compliance (SOX, PCI-DSS, SOC 2, NIST) and observability. I hold Master's degrees in Data Science and Computer Science.</p>
-    <div class="hl">
-      <span><i class="fas fa-map-marker-alt"></i>California, USA</span>
-      <span><i class="fas fa-briefcase"></i>Cloud/DevOps Engineer @ Morgan Stanley</span>
-      <span><i class="fas fa-envelope"></i>kalyankasha2302@gmail.com</span>
-      <span><i class="fab fa-github"></i>kalyank232</span>
-    </div>
-  </div>
-  <div class="tl">
-    <div><small>May 2023 – Dec 2024</small><h3>MS in Data Science</h3><em>University of the Cumberlands, USA</em></div>
-    <div><small>Aug 2022 – May 2023</small><h3>MS in Computer Science</h3><em>Duquesne University, USA</em></div>
-    <div><small>Aug 2016 – Sept 2020</small><h3>B.Tech in Information Technology</h3><em>Vardhaman College of Engineering, Hyderabad, India</em></div>
-  </div>
-</div></section>
-
-<section id="skills"><div class="in">
-  <div class="lab">Skills</div>
-  <h2 class="ttl">My <span class="g">Technology</span> Stack</h2>
-  <p class="sub">From landing zones to GitOps pipelines, the tools I use to build reliable, secure and cost-effective platforms.</p>
-  <div class="tabs" id="tabs">
-    <button class="tab on" data-f="all">All</button><button class="tab" data-f="cloud">☁️ Cloud</button><button class="tab" data-f="devops">⚙️ DevOps &amp; Security</button>
-    <button class="tab" data-f="data">📨 Messaging &amp; Data</button><button class="tab" data-f="lang">💻 Languages</button><button class="tab" data-f="db">🗄️ Databases</button>
-  </div>
-  <div class="sg" id="sg"></div>
-</div></section>
-
-<section id="experience"><div class="in">
-  <div class="lab">Experience</div>
-  <h2 class="ttl">Professional <span class="g">Journey</span></h2>
-  <p class="sub">4+ years of cloud engineering across the USA and India, delivering measurable impact through automation, security and reliability.</p>
-  <div class="ex">
-    <div class="card">
-      <div class="eh"><div class="lg">🏦</div><div><h3>Cloud/DevOps Engineer</h3><div class="co">Morgan Stanley, USA</div><small>Jan 2025 – Present<span class="bdg">Current</span></small></div></div>
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Afnaan Sayyed</a>
+    <nav aria-label="Primary">
       <ul>
-        <li>Architected secure AWS and Azure landing zones for trading, risk management and wealth management platforms, with enterprise-grade networking, IAM, governance and security controls.</li>
-        <li>Automated provisioning with Terraform and Terragrunt, reducing manual deployment effort by <b>80%</b> and keeping dev, QA, UAT and production consistent.</li>
-        <li>Built and administered highly available Kubernetes platforms on Amazon EKS and Azure AKS for microservices-based financial applications.</li>
-        <li>Implemented CI/CD and GitOps workflows with Jenkins, GitHub Actions, Argo CD and Helm; automated operations with Python, Bash and Ansible.</li>
-        <li>Secured cloud networking with VPCs, PrivateLink, HashiCorp Vault, AWS Secrets Manager and Azure Key Vault to protect sensitive financial data.</li>
-        <li>Established observability with Prometheus, CloudWatch and Azure Monitor; automated policy enforcement and audit controls aligned with SOX, PCI-DSS, SEC and FINRA.</li>
-        <li>Supported Kafka-based real-time market data, trade execution and risk analytics platforms using blue-green and canary deployments.</li>
-        <li>Managed multi-region disaster recovery and cost optimization, achieving <b>99.99%</b> platform availability and a <b>30%</b> reduction in operational costs.</li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#education">Education</a></li>
       </ul>
-      <div class="tags"><span class="tg">AWS</span><span class="tg">Azure</span><span class="tg">Terraform</span><span class="tg">Terragrunt</span><span class="tg">EKS / AKS</span><span class="tg">Argo CD</span><span class="tg">Helm</span><span class="tg">Jenkins</span><span class="tg">Vault</span><span class="tg">Kafka</span><span class="tg">Prometheus</span></div>
+    </nav>
+    <a class="btn primary sm" href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="first">
+    <div class="wrap hero">
+      <div>
+        <span class="eyebrow">Senior Cloud Engineer</span>
+        <h1>Afnaan Shafkat Sayyed</h1>
+        <p class="role">Secure, highly available cloud infrastructure on AWS and Azure.</p>
+        <p class="lead">I have spent 5+ years designing, deploying and managing cloud infrastructure for healthcare, banking and e-commerce. Today I engineer the platforms behind healthcare applications, claims processing and AI/ML workloads at UnitedHealth Group.</p>
+        <div class="cta">
+          <a class="btn primary" href="RESUME.pdf" download>Download resume</a>
+          <a class="btn" href="#contact">Contact</a>
+        </div>
+      </div>
+      <aside class="glance" aria-labelledby="glance-h">
+        <div class="glance-top">
+          <div class="avatar"><span aria-hidden="true">AS</span><img src="image.png" alt="Portrait of Afnaan Shafkat Sayyed" width="92" height="92" onerror="this.remove()"></div>
+          <div>
+            <h2 id="glance-h">At a glance</h2>
+            <p class="g-sub">Senior Cloud Engineer</p>
+          </div>
+        </div>
+        <dl>
+          <div class="g-row"><dt>Employer</dt><dd>UnitedHealth Group</dd></div>
+          <div class="g-row"><dt>Experience</dt><dd>5+ years</dd></div>
+          <div class="g-row"><dt>Industries</dt><dd>Healthcare, banking, e-commerce</dd></div>
+          <div class="g-row"><dt>Platforms</dt><dd>AWS, Azure, Kubernetes (EKS, AKS)</dd></div>
+          <div class="g-row"><dt>Practices</dt><dd>Terraform, CI/CD, disaster recovery, cost optimization</dd></div>
+          <div class="g-row"><dt>Compliance</dt><dd>HIPAA, HITECH, PCI DSS, SOC 2, NIST</dd></div>
+          <div class="g-row"><dt>Based in</dt><dd>USA</dd></div>
+        </dl>
+      </aside>
     </div>
-    <div class="card">
-      <div class="eh"><div class="lg">🏢</div><div><h3>Cloud Engineer</h3><div class="co">HCL Tech, India</div><small>Feb 2020 – Aug 2022</small></div></div>
-      <ul>
-        <li>Designed and deployed a secure AWS environment for a large-scale e-commerce platform covering product catalog, order management, payments and customer services.</li>
-        <li>Automated provisioning with Terraform, cutting environment setup time by <b>80%</b> and improving consistency across dev, test and production.</li>
-        <li>Ran containerized microservices on Amazon EKS with load balancing and auto-scaling to handle millions of requests during flash sales and peak events.</li>
-        <li>Built CI/CD pipelines with Jenkins and GitHub Actions, increasing deployment frequency by <b>70%</b> while reducing manual releases and errors.</li>
-        <li>Integrated Amazon RDS and Redis caching to speed up transactions and search; configured IAM, encryption and WAF policies to protect customer data.</li>
-        <li>Set up CloudWatch and Grafana monitoring with multi-AZ disaster recovery, reducing incident resolution time by <b>45%</b>.</li>
-        <li>Collaborated with development, QA and operations teams in an Agile environment to optimize resources and keep availability high.</li>
-      </ul>
-      <div class="tags"><span class="tg">AWS</span><span class="tg">EKS</span><span class="tg">Terraform</span><span class="tg">Jenkins</span><span class="tg">GitHub Actions</span><span class="tg">RDS</span><span class="tg">Redis</span><span class="tg">CloudWatch</span><span class="tg">Grafana</span></div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Results</span>
+        <h2>Measured outcomes from platform work</h2>
+        <p>Figures from my roles at UnitedHealth Group, Mphasis and Infosys.</p>
+      </div>
+      <div class="results">
+        <div class="res"><div class="n">50%</div><h3>Faster environment setup</h3><p>Reusable Terraform modules and Python automation across AWS accounts and Azure subscriptions.</p><span class="src">UnitedHealth Group</span></div>
+        <div class="res"><div class="n">35%</div><h3>Less deployment effort</h3><p>Standardized GitHub Actions and Azure DevOps pipelines with automated validation and security scanning.</p><span class="src">UnitedHealth Group</span></div>
+        <div class="res"><div class="n">99.9%</div><h3>Production availability target</h3><p>Containerized healthcare and ML workloads on EKS and AKS with autoscaling and health checks.</p><span class="src">UnitedHealth Group</span></div>
+        <div class="res"><div class="n">25%</div><h3>Faster incident resolution</h3><p>CloudWatch and Azure Monitor dashboards, alarms and root-cause analysis.</p><span class="src">UnitedHealth Group, Mphasis</span></div>
+        <div class="res"><div class="n">15%</div><h3>Lower cloud spend</h3><p>Rightsizing, autoscaling and removal of unused resources on AWS and Azure.</p><span class="src">UnitedHealth Group, Mphasis</span></div>
+        <div class="res"><div class="n">50+</div><h3>Banking servers migrated to AWS</h3><p>Phased on-premises cutovers with validated connectivity and documented rollback procedures.</p><span class="src">Mphasis</span></div>
+      </div>
+      <div class="compliance">
+        <span>Security and audit work aligned with</span>
+        <b>HIPAA</b><b>HITECH</b><b>PCI DSS</b><b>SOC 2</b><b>NIST</b><b>CIS Benchmarks</b>
+      </div>
     </div>
-  </div>
-</div></section>
+  </section>
 
-<section id="projects"><div class="in">
-  <div class="lab">Projects</div>
-  <h2 class="ttl">Featured <span class="g">Projects</span></h2>
-  <p class="sub">Hands-on AWS, Terraform and DevOps projects from my GitHub.</p>
-  <div class="tabs" id="ptabs">
-    <button class="tab on" data-f="all">All</button><button class="tab" data-f="aws">AWS</button><button class="tab" data-f="devops">DevOps</button>
-    <button class="tab" data-f="monitoring">Monitoring</button><button class="tab" data-f="terraform">Terraform</button><button class="tab" data-f="ml">ML</button>
-  </div>
-  <div class="pg" id="pg"></div>
-</div></section>
+  <section id="experience">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Experience</span>
+        <h2>From e-commerce to banking to healthcare</h2>
+        <p>5+ years of cloud engineering across India and the USA.</p>
+      </div>
+      <div class="roles">
+        <article class="role-row">
+          <div class="meta">
+            <h3>Senior Cloud Engineer</h3>
+            <div class="co">UnitedHealth Group, USA</div>
+            <div class="when"><span>June 2025 to present</span><span class="now">Current</span></div>
+          </div>
+          <div>
+            <ul>
+              <li>Engineered AWS and Azure infrastructure for healthcare applications, claims processing, analytics and AI/ML workloads across development, testing, staging and production, improving deployment consistency and scalability.</li>
+              <li>Automated provisioning of 100+ cloud resources with Terraform and Python, cutting environment setup time by <strong>50%</strong> through reusable modules and standardized configurations.</li>
+              <li>Designed private networking across AWS VPCs and Azure VNets, securing connectivity for 20+ application and data services and blocking direct public access to PHI workloads.</li>
+              <li>Deployed containerized healthcare applications and ML inference services on Amazon EKS and AKS with autoscaling, health checks and resource limits to support a <strong>99.9%</strong> production availability target.</li>
+              <li>Standardized CI/CD pipelines on GitHub Actions and Azure DevOps with automated validation and security scanning, reducing deployment effort by <strong>35%</strong>.</li>
+              <li>Implemented healthcare data protection with AWS IAM, Microsoft Entra ID and Azure Key Vault, strengthening least-privilege access, encryption and audit logging for sensitive PHI.</li>
+              <li>Provisioned secure infrastructure for analytics and AI workloads on Amazon S3, SageMaker, Azure Data Lake Storage Gen2 and Azure Databricks, and supported secure model endpoints and inference services for production AI/ML and Generative AI.</li>
+              <li>Integrated Amazon CloudWatch and Azure Monitor for infrastructure health, application performance and alerting, reducing mean time to resolve incidents by <strong>25%</strong>.</li>
+              <li>Implemented AWS Backup and Azure Backup with documented recovery runbooks, targeting a 15-minute RPO and 4-hour RTO for critical workloads, and cut compute and storage spend by <strong>15%</strong> through rightsizing and autoscaling.</li>
+            </ul>
+            <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Terraform</span><span class="tag">Python</span><span class="tag">EKS / AKS</span><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">SageMaker</span><span class="tag">Databricks</span><span class="tag">Key Vault</span></div>
+          </div>
+        </article>
+        <article class="role-row">
+          <div class="meta">
+            <h3>Cloud Engineer</h3>
+            <div class="co">Mphasis, India</div>
+            <div class="when"><span>July 2022 to Aug 2024</span></div>
+          </div>
+          <div>
+            <ul>
+              <li>Executed phased migration of <strong>50+</strong> banking application servers from on-premises data centers to AWS using AWS Application Migration Service, EC2 and VPC, with validated connectivity and documented rollback procedures.</li>
+              <li>Migrated 5+ banking databases with AWS Database Migration Service, validating replication lag, schema compatibility and application connectivity for production cutovers.</li>
+              <li>Provisioned standardized infrastructure with Terraform and CloudFormation, reducing manual environment provisioning effort by <strong>35%</strong> across development, UAT and production.</li>
+              <li>Enforced least-privilege access with IAM roles and policies, KMS encryption and private subnet isolation, and enabled CloudTrail audit logging for traceability of infrastructure changes.</li>
+              <li>Automated deployment workflows with Jenkins, Git and AWS deployment services, adding validation checks, change approvals and rollback procedures.</li>
+              <li>Configured CloudWatch dashboards, alarms and centralized logs, reducing mean time to resolution by <strong>25%</strong>.</li>
+              <li>Reduced monthly AWS spend by <strong>15%</strong> through EC2 rightsizing, removal of idle resources and S3 lifecycle policies.</li>
+              <li>Wrote Python and Bash scripts that analyze CloudWatch metrics to flag CPU and memory spikes and recurring bottlenecks, enabling proactive capacity adjustments.</li>
+              <li>Maintained disaster recovery readiness by validating EBS snapshots and AWS Backup jobs, documenting recovery procedures and joining failover tests against RTO and RPO requirements.</li>
+            </ul>
+            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">AWS MGN</span><span class="tag">DMS</span><span class="tag">Jenkins</span><span class="tag">CloudWatch</span><span class="tag">KMS</span><span class="tag">CloudTrail</span></div>
+          </div>
+        </article>
+        <article class="role-row">
+          <div class="meta">
+            <h3>Cloud Engineer</h3>
+            <div class="co">Infosys, India</div>
+            <div class="when"><span>Oct 2020 to June 2022</span></div>
+          </div>
+          <div>
+            <ul>
+              <li>Provisioned and managed AWS infrastructure (EC2, VPC, subnets, security groups, Application Load Balancer, Auto Scaling) to host scalable e-commerce workloads and absorb seasonal traffic.</li>
+              <li>Automated provisioning with Terraform and CloudFormation across development, QA and production, reducing manual setup effort by <strong>30%</strong>.</li>
+              <li>Built CI/CD pipelines with Jenkins, Git and Maven, reducing deployment turnaround time by <strong>25%</strong>.</li>
+              <li>Configured S3, RDS, IAM and Systems Manager to protect application data, manage environment configuration and enforce least-privilege access.</li>
+              <li>Implemented multi-AZ architecture, load balancing and Route 53 routing with backup and recovery procedures to protect availability during infrastructure failures.</li>
+              <li>Set up CloudWatch dashboards, alarms and CloudTrail audit trails, cutting initial incident diagnosis time by <strong>20%</strong>.</li>
+              <li>Enforced cloud security with IAM policies, network ACLs, security groups, encryption and OS patching, and kept audit evidence for PCI DSS controls in payment-card environments.</li>
+              <li>Performed root cause analysis on production incidents and documented corrective actions in runbooks to reduce repeat escalations.</li>
+            </ul>
+            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">CloudFormation</span><span class="tag">Jenkins</span><span class="tag">Maven</span><span class="tag">RDS</span><span class="tag">Route 53</span><span class="tag">CloudWatch</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<section id="achievements"><div class="in">
-  <div class="lab">Impact</div>
-  <h2 class="ttl">Milestones &amp; <span class="g">Results</span></h2>
-  <p class="sub">Quantified outcomes from my cloud and DevOps work.</p>
-  <div class="ag">
-    <div class="ac"><div class="ic">🏗️</div><h3>Provisioning Automation</h3><p>Terraform and Terragrunt automation across dev, QA, UAT and production at Morgan Stanley.</p><div class="n">80% Less Manual Effort</div></div>
-    <div class="ac"><div class="ic">🛡️</div><h3>Platform Availability</h3><p>Multi-region disaster recovery and resilient AWS/Azure architecture for business-critical financial platforms.</p><div class="n">99.99% Uptime</div></div>
-    <div class="ac"><div class="ic">💰</div><h3>Cost Optimization</h3><p>Reduced operational cloud costs through optimization and right-sizing initiatives.</p><div class="n">30% ↓</div></div>
-    <div class="ac"><div class="ic">🚀</div><h3>Deployment Frequency</h3><p>Jenkins and GitHub Actions CI/CD pipelines for the e-commerce platform at HCL Tech.</p><div class="n">70% ↑</div></div>
-    <div class="ac"><div class="ic">⏱️</div><h3>Incident Resolution</h3><p>CloudWatch and Grafana monitoring with multi-AZ disaster recovery.</p><div class="n">45% Faster</div></div>
-    <div class="ac"><div class="ic">📜</div><h3>Regulatory Compliance</h3><p>Automated policy enforcement and audit controls aligned with SOX, PCI-DSS, SEC and FINRA.</p><div class="n">SOX · PCI-DSS</div></div>
-    <div class="ac"><div class="ic">🎓</div><h3>Dual Master's Degrees</h3><p>MS in Data Science (University of the Cumberlands) and MS in Computer Science (Duquesne University).</p><div class="n">2× MS Degrees</div></div>
-    <div class="ac"><div class="ic">🌐</div><h3>Open Source</h3><p>Published AWS and Terraform projects on GitHub, including serverless APIs and blue-green deployments.</p><div class="n">9+ Projects</div></div>
-  </div>
-</div></section>
+  <section id="skills">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Skills</span>
+        <h2>Tools and practices</h2>
+        <p>Grouped by the job they do, from landing zones to incident response.</p>
+      </div>
+      <div class="stack">
+        <div class="grp">
+          <h3>Cloud platforms</h3>
+          <ul class="chips">
+            <li>AWS</li><li>Microsoft Azure</li><li>GCP</li><li>EC2</li><li>S3</li><li>VPC</li><li>IAM</li><li>Lambda</li><li>EKS</li><li>ECS</li><li>AKS</li><li>RDS</li><li>DynamoDB</li><li>CloudFront</li><li>Route 53</li><li>KMS</li><li>Secrets Manager</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Infrastructure as code and automation</h3>
+          <ul class="chips">
+            <li>Terraform</li><li>CloudFormation</li><li>Azure Bicep</li><li>Ansible</li><li>Python</li><li>Bash</li><li>PowerShell</li><li>AWS CLI</li><li>Azure CLI</li><li>Policy as Code</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>DevOps and CI/CD</h3>
+          <ul class="chips">
+            <li>Jenkins</li><li>GitHub Actions</li><li>GitLab CI/CD</li><li>Azure DevOps</li><li>Git</li><li>Docker</li><li>Kubernetes</li><li>Helm</li><li>Kustomize</li><li>Argo CD</li><li>GitOps</li><li>Blue-green and canary releases</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Networking and architecture</h3>
+          <ul class="chips">
+            <li>VPC and VNet design</li><li>DNS</li><li>VPN</li><li>Load balancing</li><li>Private endpoints</li><li>Hybrid and multi-cloud</li><li>Microservices</li><li>Serverless</li><li>Cloud migration</li><li>Landing zones</li><li>Multi-region architecture</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Security and compliance</h3>
+          <ul class="chips">
+            <li>IAM and RBAC</li><li>SSO</li><li>HashiCorp Vault</li><li>Encryption</li><li>Vulnerability scanning</li><li>DevSecOps</li><li>Zero Trust</li><li>AWS Organizations</li><li>Azure Policy</li><li>HIPAA</li><li>HITECH</li><li>PCI DSS</li><li>SOC 2</li><li>NIST</li><li>CIS Benchmarks</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Monitoring and reliability</h3>
+          <ul class="chips">
+            <li>CloudWatch</li><li>Azure Monitor</li><li>Prometheus</li><li>Grafana</li><li>Splunk</li><li>Datadog</li><li>ELK Stack</li><li>OpenTelemetry</li><li>Distributed tracing</li><li>Incident management</li><li>Root cause analysis</li><li>SLOs and SLIs</li><li>Disaster recovery</li><li>Backup and recovery</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Cloud operations and FinOps</h3>
+          <ul class="chips">
+            <li>Linux</li><li>Windows Server</li><li>Nginx</li><li>Apache</li><li>ITIL</li><li>Patch management</li><li>Capacity planning</li><li>AWS Cost Explorer</li><li>Azure Cost Management</li><li>Rightsizing</li>
+          </ul>
+        </div>
+        <div class="grp">
+          <h3>Data, integration and domains</h3>
+          <ul class="chips">
+            <li>PostgreSQL</li><li>MySQL</li><li>SQL Server</li><li>Oracle</li><li>Redis</li><li>Database migration</li><li>REST APIs</li><li>API Gateway</li><li>Event-driven architecture</li><li>HL7</li><li>FHIR</li><li>EHR/EMR integration</li><li>Payment processing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section id="contact"><div class="in">
-  <div class="lab">Contact</div>
-  <h2 class="ttl">Let's Build Something <span class="g">Amazing</span></h2>
-  <p class="sub">Looking for a Cloud/DevOps Engineer, or want to discuss a project? I'd love to connect.</p>
-  <div class="cl">
-    <a class="ci" href="mailto:kalyankasha2302@gmail.com"><i class="fas fa-envelope"></i><div><small>Email</small><b>kalyankasha2302@gmail.com</b></div></a>
-    <a class="ci" href="https://www.linkedin.com/in/kalyan-k-6b8a37129/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><div><small>LinkedIn</small><b>linkedin.com/in/kalyan-k-6b8a37129</b></div></a>
-    <a class="ci" href="https://github.com/kalyank232" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><div><small>GitHub</small><b>github.com/kalyank232</b></div></a>
-    <a class="ci" href="tel:+14088835015"><i class="fas fa-phone"></i><div><small>Phone</small><b>+1 (408) 883-5015</b></div></a>
-    <div class="ci"><i class="fas fa-map-marker-alt"></i><div><small>Location</small><b>California, USA</b></div></div>
-  </div>
-</div></section>
+  <section id="certifications">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Certifications</span>
+        <h2>Microsoft certified in DevOps, identity and compliance</h2>
+      </div>
+      <div class="list">
+        <div class="list-row"><div class="when">AZ-400</div><div><h3>DevOps Engineer Expert</h3><p>Microsoft Certified</p></div></div>
+        <div class="list-row"><div class="when">AZ-204</div><div><h3>Azure Developer Associate</h3><p>Microsoft Certified</p></div></div>
+        <div class="list-row"><div class="when">SC-300</div><div><h3>Identity and Access Administrator Associate</h3><p>Microsoft Certified</p></div></div>
+        <div class="list-row"><div class="when">SC-400</div><div><h3>Information Protection and Compliance Administrator Associate</h3><p>Microsoft Certified</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Education</span>
+        <h2>Information systems and engineering</h2>
+      </div>
+      <div class="list">
+        <div class="list-row"><div class="when">Master's degree</div><div><h3>Master's in Information Systems</h3><p>DePaul University, IL, USA</p></div></div>
+        <div class="list-row"><div class="when">Bachelor's degree</div><div><h3>Bachelor of Engineering in Mechanical Engineering</h3><p>Vishwakarma Institute of Information Technology, India</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div>
+        <span class="eyebrow">Contact</span>
+        <h2 style="margin-top:1rem">Get in touch.</h2>
+        <p class="lead">For cloud engineering roles, platform work or project discussions, send a message and I will reply.</p>
+      </div>
+      <div class="rows">
+        <div class="crow"><span class="l">Email</span><a class="val" id="v-email" href="mailto:sayyedafnaan98@gmail.com">sayyedafnaan98@gmail.com</a><button type="button" data-copy="v-email">Copy</button></div>
+        <div class="crow"><span class="l">Phone</span><a class="val" id="v-phone" href="tel:+18722210042">872-221-0042</a><button type="button" data-copy="v-phone">Copy</button></div>
+        <div class="crow"><span class="l">LinkedIn</span><a class="val" href="https://www.linkedin.com/in/afnaan87" target="_blank" rel="noopener noreferrer">linkedin.com/in/afnaan87</a><span></span></div>
+        <div class="crow"><span class="l">GitHub</span><a class="val" href="https://github.com/sayyedafnaan98-sa" target="_blank" rel="noopener noreferrer">github.com/sayyedafnaan98-sa</a><span></span></div>
+        <div class="crow"><span class="l">Resume</span><a class="val" href="RESUME.pdf" download>Download PDF</a><span></span></div>
+        <div class="crow"><span class="l">Location</span><span class="val">USA</span><span></span></div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer><div class="in"><span>© 2026 Kalyan Kasha. Crafted with ☁️ &amp; ❤️</span><a href="#home" class="btn o" style="padding:8px 16px"><i class="fas fa-arrow-up"></i></a></div></footer>
+<footer class="wrap">
+  <span>© 2026 Afnaan Shafkat Sayyed</span>
+  <a href="#top">Back to top ↑</a>
+</footer>
 
 <script>
-const SKILLS=[
-['AWS EC2','🖥️','Expert','cloud'],['AWS S3','🗑️','Expert','cloud'],['AWS EKS','☸️','Expert','cloud'],['AWS Lambda','⚡','Advanced','cloud'],
-['VPC & IAM','🔒','Expert','cloud'],['AWS RDS','🐘','Advanced','cloud'],['CloudWatch','📊','Expert','cloud'],['Route 53 / ELB','🌐','Advanced','cloud'],
-['Azure AKS','☁️','Expert','cloud'],['Azure DevOps','🔷','Advanced','cloud'],['Azure Monitor','📈','Advanced','cloud'],['Azure Key Vault','🔑','Advanced','cloud'],
-['Terraform','🏗️','Expert','devops'],['Terragrunt','🧱','Expert','devops'],['CloudFormation / Bicep','📐','Advanced','devops'],['Ansible','🅰️','Advanced','devops'],
-['Docker','🐳','Expert','devops'],['Kubernetes','⚙️','Expert','devops'],['Helm','⛵','Advanced','devops'],['Argo CD','🐙','Advanced','devops'],
-['Jenkins','🔧','Expert','devops'],['GitHub Actions','♾️','Expert','devops'],['GitLab CI/CD','🦊','Advanced','devops'],['HashiCorp Vault','🛡️','Advanced','devops'],
-['SonarQube / Snyk','🔍','Advanced','devops'],['Prometheus / Grafana','🔥','Advanced','devops'],['ELK / Splunk / Datadog','📡','Advanced','devops'],
-['Apache Kafka','📨','Advanced','data'],['RabbitMQ','🐇','Intermediate','data'],['Snowflake','❄️','Intermediate','data'],['Amazon Redshift','🏭','Intermediate','data'],
-['Python','🐍','Expert','lang'],['Bash','💻','Expert','lang'],['PowerShell','🪟','Advanced','lang'],
-['PostgreSQL','🐬','Advanced','db'],['MySQL','🗄️','Advanced','db'],['MongoDB','🍃','Advanced','db'],['DynamoDB','⚡','Advanced','db'],['Redis','🔴','Advanced','db']];
-const PROJ=[
-['AWS Animal Crossing REST API','aws terraform','🎮','Serverless REST API provisioned entirely with Terraform: API Gateway, Cognito, Lambda, DynamoDB, S3 and Step Functions.','linear-gradient(135deg,#1a0533,#0f2e0a)','https://github.com/kalyank232/AWSAnimalCrossing'],
-['Mobile Price Predictor (SageMaker)','aws ml','📱','ML classification model deployed on AWS SageMaker with a Flask backend predicting smartphone price ranges.','linear-gradient(135deg,#0f1f2e,#1a0e2e)','https://github.com/kalyank232/Mobile-Price-Predictor-using-AWS-Sagemaker'],
-['Blue-Green Deployments for ECS','aws devops','🔵','Zero-downtime blue-green deployments for ECS using CodeDeploy, ALB traffic shifting and CloudWatch-based rollback.','linear-gradient(135deg,#0d2137,#0b3320)','https://github.com/kalyank232/blue-green-deployments-ecs'],
-['API Gateway Deployment Strategies','aws devops','🚪','Canary releases, stage variables and multi-region failover for API Gateway with Lambda and Route 53.','linear-gradient(135deg,#1a1000,#0f1a2e)','https://github.com/kalyank232/advanced-api-deployment-strategies'],
-['Health Monitoring: VPC Lattice & CloudWatch','aws monitoring','📊','Unified observability for microservices using VPC Lattice, CloudWatch composite alarms, dashboards and Synthetics.','linear-gradient(135deg,#0a1628,#0f2018)','https://github.com/kalyank232/application-health-monitoring-lattice-cloudwatch'],
-['Chat Notifications with SNS & Chatbot','aws devops terraform','💬','CloudWatch alarms routed through SNS and AWS Chatbot to Slack and Microsoft Teams, managed with Terraform.','linear-gradient(135deg,#0f1a2e,#1a0f2e)','https://github.com/kalyank232/chat-notifications-sns-chatbot'],
-['Web Monitoring: Azure App Service','devops monitoring','🌐','Azure App Service monitoring with Azure Monitor, Application Insights, availability tests and alert action groups.','linear-gradient(135deg,#0f1a28,#1a1000)','https://github.com/kalyank232/web-monitoring-app-service-monitor']];
-const $=s=>document.querySelector(s);
-function skills(f){$('#sg').innerHTML=SKILLS.filter(s=>f==='all'||s[3]===f).map(s=>`<div class="sk"><i>${s[1]}</i><b>${s[0]}</b><span>${s[2]}</span></div>`).join('')}
-function projects(f){$('#pg').innerHTML=PROJ.filter(p=>f==='all'||p[1].includes(f)).map(p=>`<article class="pc"><div class="ph" style="background:${p[4]}">${p[2]}</div><div class="pb"><small>${p[1]}</small><h3>${p[0]}</h3><p>${p[3]}</p><a href="${p[5]}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a></div></article>`).join('')}
-function tabs(id,fn){$(id).addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$(id).querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');fn(b.dataset.f)})}
-tabs('#tabs',skills);tabs('#ptabs',projects);skills('all');projects('all');
-addEventListener('scroll',()=>$('#nb').classList.toggle('s',scrollY>40),{passive:true});
-const PH=['Cloud/DevOps Engineer','AWS & Azure Specialist','Terraform & Terragrunt Expert','Kubernetes (EKS/AKS) Engineer','GitOps & CI/CD Builder','DevSecOps Practitioner'];
-let pi=0,ci=0,del=false;
-(function type(){const p=PH[pi],el=$('#ty');
-  if(!del){el.textContent=p.slice(0,++ci);if(ci===p.length){del=true;return setTimeout(type,1700)}}
-  else{el.textContent=p.slice(0,--ci);if(!ci){del=false;pi=(pi+1)%PH.length}}
-  setTimeout(type,del?50:85)})();
+(function(){
+  document.querySelectorAll('button[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var el=document.getElementById(b.getAttribute('data-copy'));
+      var done=function(t){var o=b.textContent;b.textContent=t;setTimeout(function(){b.textContent=o},1600)};
+      var fallback=function(){
+        try{var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);done('Selected')}catch(e){}
+      };
+      try{
+        navigator.clipboard.writeText(el.textContent.trim()).then(function(){done('Copied')},fallback);
+      }catch(e){fallback()}
+    });
+  });
+})();
 </script>
 </body>
 </html>
