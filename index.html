@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalyan Kasha | Cloud/DevOps Engineer Portfolio</title>
+<meta name="description" content="Kalyan Kasha — Cloud/DevOps Engineer with 4+ years of experience across AWS and Azure: landing zones, Terraform, Kubernetes (EKS/AKS), GitOps and DevSecOps for financial services and e-commerce.">
+<meta name="keywords" content="Kalyan Kasha, Cloud Engineer, DevOps Engineer, AWS, Azure, Terraform, Kubernetes, GitOps, Python, Portfolio">
+<meta name="author" content="Kalyan Kasha">
+<meta property="og:title" content="Kalyan Kasha | Cloud/DevOps Engineer Portfolio">
+<meta property="og:description" content="Cloud/DevOps Engineer with expertise in AWS, Azure, Terraform, Kubernetes, GitOps and secure cloud infrastructure.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/291906544?v=4">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#050816;--card:rgba(255,255,255,.05);--a:#4F8CFF;--b:#7B61FF;--c:#00D4FF;--g:#00FFA3;--t:#fff;--m:#9ca3af;--bd:rgba(255,255,255,.08)}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);overflow-x:hidden;line-height:1.6}
+.aur{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(600px 600px at 0 0,rgba(79,140,255,.15),transparent),radial-gradient(500px 500px at 100% 40%,rgba(123,97,255,.14),transparent),radial-gradient(400px 400px at 40% 100%,rgba(0,212,255,.1),transparent)}
+main,nav,footer{position:relative;z-index:1}
+.g{background:linear-gradient(135deg,var(--a),var(--b),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1,h2,h3,.logo{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;padding:14px 0;transition:.3s}
+nav.s{background:rgba(5,8,22,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
+.in{max-width:1180px;margin:0 auto;padding:0 28px}
+.nv{display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.5rem;font-weight:700;text-decoration:none}
+.links{display:flex;gap:26px;list-style:none}
+.links a{color:var(--m);text-decoration:none;font-size:.875rem;font-weight:500;transition:.3s}
+.links a:hover{color:var(--t)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:50px;font-weight:600;font-size:.9rem;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--a),var(--b));box-shadow:0 0 24px rgba(79,140,255,.35);transition:.3s;border:0;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn.o{background:transparent;border:1px solid var(--bd);box-shadow:none}
+.btn.o:hover{border-color:var(--a)}
+section{padding:100px 0}
+#home{min-height:100vh;display:flex;align-items:center;padding-top:90px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.hero h1{font-size:clamp(2.3rem,5vw,4rem);line-height:1.1;margin-bottom:14px}
+.typed{font-size:1.25rem;color:var(--m);min-height:2rem;margin-bottom:18px}
+.typed b{color:var(--a)}
+.hero p.d{color:var(--m);max-width:540px;margin-bottom:30px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:40px;padding-top:34px;border-top:1px solid var(--bd)}
+.stats b{display:block;font-family:'Space Grotesk';font-size:2rem}
+.stats span{font-size:.8rem;color:var(--m)}
+.av{width:300px;height:300px;border-radius:50%;padding:3px;margin:auto;background:conic-gradient(var(--a),var(--b),var(--c),var(--a));animation:sp 6s linear infinite}
+.av div{width:100%;height:100%;border-radius:50%;background:var(--bg);overflow:hidden;animation:sp 6s linear infinite reverse}
+.av img{width:100%;height:100%;object-fit:cover}
+@keyframes sp{to{transform:rotate(360deg)}}
+.lab{font-size:.75rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--a);margin-bottom:10px}
+.ttl{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:12px}
+.sub{color:var(--m);max-width:620px;margin-bottom:46px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+.about p{color:var(--m);margin-bottom:16px}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:10px;color:var(--m);font-size:.875rem;margin-top:22px}
+.hl i{color:var(--a);margin-right:8px}
+.tl{border-left:1px solid var(--a);padding-left:24px}
+.tl div{position:relative;padding-bottom:28px}
+.tl div::before{content:'';position:absolute;left:-30px;top:6px;width:11px;height:11px;border-radius:50%;background:var(--a);box-shadow:0 0 10px var(--a)}
+.tl small{color:var(--a);font-weight:600;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em}
+.tl h3{font-size:1rem}
+.tl em{display:block;color:var(--b);font-style:normal;font-size:.85rem}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px}
+.tab{background:var(--card);border:1px solid var(--bd);color:var(--m);padding:8px 18px;border-radius:50px;font-size:.85rem;cursor:pointer;font-family:inherit;transition:.3s}
+.tab.on,.tab:hover{background:rgba(79,140,255,.15);border-color:var(--a);color:var(--a)}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
+.sk{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px 12px;text-align:center;transition:.3s}
+.sk:hover{transform:translateY(-6px);border-color:var(--a);box-shadow:0 16px 40px rgba(79,140,255,.18)}
+.sk i{font-style:normal;font-size:1.8rem;display:block;margin-bottom:8px}
+.sk b{font-size:.8rem;display:block}
+.sk span{font-size:.7rem;color:var(--a)}
+.ex{display:flex;flex-direction:column;gap:26px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:34px;position:relative;transition:.3s}
+.card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--a),var(--b))}
+.card:hover{transform:translateY(-4px);border-color:rgba(79,140,255,.3)}
+.eh{display:flex;gap:16px;margin-bottom:18px;align-items:center}
+.eh .lg{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--a),var(--b));display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.eh h3{font-size:1.2rem}
+.eh .co{color:var(--a);font-weight:600}
+.eh small{color:var(--m)}
+.bdg{background:rgba(0,255,163,.1);border:1px solid rgba(0,255,163,.3);color:var(--g);font-size:.65rem;font-weight:700;padding:2px 10px;border-radius:50px;margin-left:6px}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:9px;color:var(--m);font-size:.9rem}
+.card li::before{content:'▸ ';color:var(--a)}
+.card li b{color:var(--t)}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px;padding-top:18px;border-top:1px solid var(--bd)}
+.tg{background:rgba(79,140,255,.1);border:1px solid rgba(79,140,255,.2);color:var(--a);font-size:.72rem;font-weight:600;padding:3px 11px;border-radius:50px}
+.pg{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:24px}
+.pc{background:var(--card);border:1px solid var(--bd);border-radius:22px;overflow:hidden;transition:.4s;display:flex;flex-direction:column}
+.pc:hover{transform:translateY(-8px);border-color:rgba(79,140,255,.4);box-shadow:0 24px 60px rgba(79,140,255,.15)}
+.ph{height:110px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.pb{padding:22px;display:flex;flex-direction:column;flex:1}
+.pb small{color:var(--a);font-weight:700;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}
+.pb h3{font-size:1.05rem;margin:6px 0 8px}
+.pb p{color:var(--m);font-size:.85rem;margin-bottom:14px;flex:1}
+.pb a{color:var(--a);text-decoration:none;font-size:.82rem;font-weight:600;margin-top:14px}
+.ag{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.ac{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:28px;transition:.3s}
+.ac:hover{transform:translateY(-6px);border-color:rgba(79,140,255,.3)}
+.ac .ic{font-size:1.7rem;margin-bottom:12px}
+.ac h3{font-size:1.05rem;margin-bottom:6px}
+.ac p{color:var(--m);font-size:.85rem}
+.ac .n{font-family:'Space Grotesk';font-size:1.6rem;font-weight:700;margin-top:10px;background:linear-gradient(135deg,var(--a),var(--c));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.cl{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.ci{display:flex;gap:14px;align-items:center;text-decoration:none;color:var(--t);background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px 22px;transition:.3s}
+a.ci:hover{border-color:var(--a);transform:translateX(6px)}
+.ci i{width:42px;height:42px;border-radius:12px;background:rgba(79,140,255,.15);display:flex;align-items:center;justify-content:center;color:var(--a)}
+.ci small{display:block;color:var(--m);font-size:.72rem}
+.ci b{font-size:.92rem}
+footer{border-top:1px solid var(--bd);padding:34px 0;color:var(--m);font-size:.875rem}
+footer .in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+@media(max-width:900px){.hero,.about{grid-template-columns:1fr}.av{display:none}.links{display:none}.hl{grid-template-columns:1fr}.stats{flex-wrap:wrap;gap:22px}section{padding:76px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="aur"></div>
+<nav id="nb"><div class="in nv">
+  <a href="#home" class="logo g">KK</a>
+  <ul class="links">
+    <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="mailto:kalyankasha2302@gmail.com" class="btn">Hire Me</a>
+</div></nav>
+
+<main>
+<section id="home"><div class="in hero">
+  <div>
+    <h1>Hi, I'm <span class="g">Kalyan</span><br>Cloud/DevOps Engineer</h1>
+    <div class="typed"><b id="ty"></b>|</div>
+    <p class="d">Cloud/DevOps Engineer with 4+ years of experience designing, automating and securing cloud infrastructure on AWS and Azure for financial services and e-commerce. Expert in Terraform, Kubernetes, GitOps and DevSecOps.</p>
+    <div class="row"><a href="#projects" class="btn"><i class="fas fa-rocket"></i> View Projects</a><a href="mailto:kalyankasha2302@gmail.com" class="btn o"><i class="fas fa-paper-plane"></i> Contact Me</a></div>
+    <div class="stats">
+      <div><b class="g">4+</b><span>Years Experience</span></div>
+      <div><b class="g">99.99%</b><span>Platform Availability</span></div>
+      <div><b class="g">80%</b><span>Less Manual Deploy Effort</span></div>
+    </div>
+  </div>
+  <div class="av"><div><img src="https://avatars.githubusercontent.com/u/291906544?v=4" alt="Kalyan Kasha" onerror="this.remove()"></div></div>
+</div></section>
+
+<section id="about"><div class="in about">
+  <div>
+    <div class="lab">About</div>
+    <h2 class="ttl">Building secure <span class="g">cloud platforms</span></h2>
+    <p>I'm Kalyan Kasha, a Cloud/DevOps Engineer based in California, USA, with 4+ years of experience designing, automating and managing secure cloud infrastructure across AWS and Azure. Currently at Morgan Stanley, I build enterprise cloud landing zones and platforms for trading, risk and wealth management in a regulated environment.</p>
+    <p>My work spans Infrastructure as Code with Terraform and Terragrunt, Kubernetes on EKS and AKS, CI/CD and GitOps with Jenkins, GitHub Actions, Argo CD and Helm, plus cloud security, compliance (SOX, PCI-DSS, SOC 2, NIST) and observability. I hold Master's degrees in Data Science and Computer Science.</p>
+    <div class="hl">
+      <span><i class="fas fa-map-marker-alt"></i>California, USA</span>
+      <span><i class="fas fa-briefcase"></i>Cloud/DevOps Engineer @ Morgan Stanley</span>
+      <span><i class="fas fa-envelope"></i>kalyankasha2302@gmail.com</span>
+      <span><i class="fab fa-github"></i>kalyank232</span>
+    </div>
+  </div>
+  <div class="tl">
+    <div><small>May 2023 – Dec 2024</small><h3>MS in Data Science</h3><em>University of the Cumberlands, USA</em></div>
+    <div><small>Aug 2022 – May 2023</small><h3>MS in Computer Science</h3><em>Duquesne University, USA</em></div>
+    <div><small>Aug 2016 – Sept 2020</small><h3>B.Tech in Information Technology</h3><em>Vardhaman College of Engineering, Hyderabad, India</em></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="in">
+  <div class="lab">Skills</div>
+  <h2 class="ttl">My <span class="g">Technology</span> Stack</h2>
+  <p class="sub">From landing zones to GitOps pipelines, the tools I use to build reliable, secure and cost-effective platforms.</p>
+  <div class="tabs" id="tabs">
+    <button class="tab on" data-f="all">All</button><button class="tab" data-f="cloud">☁️ Cloud</button><button class="tab" data-f="devops">⚙️ DevOps &amp; Security</button>
+    <button class="tab" data-f="data">📨 Messaging &amp; Data</button><button class="tab" data-f="lang">💻 Languages</button><button class="tab" data-f="db">🗄️ Databases</button>
+  </div>
+  <div class="sg" id="sg"></div>
+</div></section>
+
+<section id="experience"><div class="in">
+  <div class="lab">Experience</div>
+  <h2 class="ttl">Professional <span class="g">Journey</span></h2>
+  <p class="sub">4+ years of cloud engineering across the USA and India, delivering measurable impact through automation, security and reliability.</p>
+  <div class="ex">
+    <div class="card">
+      <div class="eh"><div class="lg">🏦</div><div><h3>Cloud/DevOps Engineer</h3><div class="co">Morgan Stanley, USA</div><small>Jan 2025 – Present<span class="bdg">Current</span></small></div></div>
+      <ul>
+        <li>Architected secure AWS and Azure landing zones for trading, risk management and wealth management platforms, with enterprise-grade networking, IAM, governance and security controls.</li>
+        <li>Automated provisioning with Terraform and Terragrunt, reducing manual deployment effort by <b>80%</b> and keeping dev, QA, UAT and production consistent.</li>
+        <li>Built and administered highly available Kubernetes platforms on Amazon EKS and Azure AKS for microservices-based financial applications.</li>
+        <li>Implemented CI/CD and GitOps workflows with Jenkins, GitHub Actions, Argo CD and Helm; automated operations with Python, Bash and Ansible.</li>
+        <li>Secured cloud networking with VPCs, PrivateLink, HashiCorp Vault, AWS Secrets Manager and Azure Key Vault to protect sensitive financial data.</li>
+        <li>Established observability with Prometheus, CloudWatch and Azure Monitor; automated policy enforcement and audit controls aligned with SOX, PCI-DSS, SEC and FINRA.</li>
+        <li>Supported Kafka-based real-time market data, trade execution and risk analytics platforms using blue-green and canary deployments.</li>
+        <li>Managed multi-region disaster recovery and cost optimization, achieving <b>99.99%</b> platform availability and a <b>30%</b> reduction in operational costs.</li>
+      </ul>
+      <div class="tags"><span class="tg">AWS</span><span class="tg">Azure</span><span class="tg">Terraform</span><span class="tg">Terragrunt</span><span class="tg">EKS / AKS</span><span class="tg">Argo CD</span><span class="tg">Helm</span><span class="tg">Jenkins</span><span class="tg">Vault</span><span class="tg">Kafka</span><span class="tg">Prometheus</span></div>
+    </div>
+    <div class="card">
+      <div class="eh"><div class="lg">🏢</div><div><h3>Cloud Engineer</h3><div class="co">HCL Tech, India</div><small>Feb 2020 – Aug 2022</small></div></div>
+      <ul>
+        <li>Designed and deployed a secure AWS environment for a large-scale e-commerce platform covering product catalog, order management, payments and customer services.</li>
+        <li>Automated provisioning with Terraform, cutting environment setup time by <b>80%</b> and improving consistency across dev, test and production.</li>
+        <li>Ran containerized microservices on Amazon EKS with load balancing and auto-scaling to handle millions of requests during flash sales and peak events.</li>
+        <li>Built CI/CD pipelines with Jenkins and GitHub Actions, increasing deployment frequency by <b>70%</b> while reducing manual releases and errors.</li>
+        <li>Integrated Amazon RDS and Redis caching to speed up transactions and search; configured IAM, encryption and WAF policies to protect customer data.</li>
+        <li>Set up CloudWatch and Grafana monitoring with multi-AZ disaster recovery, reducing incident resolution time by <b>45%</b>.</li>
+        <li>Collaborated with development, QA and operations teams in an Agile environment to optimize resources and keep availability high.</li>
+      </ul>
+      <div class="tags"><span class="tg">AWS</span><span class="tg">EKS</span><span class="tg">Terraform</span><span class="tg">Jenkins</span><span class="tg">GitHub Actions</span><span class="tg">RDS</span><span class="tg">Redis</span><span class="tg">CloudWatch</span><span class="tg">Grafana</span></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="projects"><div class="in">
+  <div class="lab">Projects</div>
+  <h2 class="ttl">Featured <span class="g">Projects</span></h2>
+  <p class="sub">Hands-on AWS, Terraform and DevOps projects from my GitHub.</p>
+  <div class="tabs" id="ptabs">
+    <button class="tab on" data-f="all">All</button><button class="tab" data-f="aws">AWS</button><button class="tab" data-f="devops">DevOps</button>
+    <button class="tab" data-f="monitoring">Monitoring</button><button class="tab" data-f="terraform">Terraform</button><button class="tab" data-f="ml">ML</button>
+  </div>
+  <div class="pg" id="pg"></div>
+</div></section>
+
+<section id="achievements"><div class="in">
+  <div class="lab">Impact</div>
+  <h2 class="ttl">Milestones &amp; <span class="g">Results</span></h2>
+  <p class="sub">Quantified outcomes from my cloud and DevOps work.</p>
+  <div class="ag">
+    <div class="ac"><div class="ic">🏗️</div><h3>Provisioning Automation</h3><p>Terraform and Terragrunt automation across dev, QA, UAT and production at Morgan Stanley.</p><div class="n">80% Less Manual Effort</div></div>
+    <div class="ac"><div class="ic">🛡️</div><h3>Platform Availability</h3><p>Multi-region disaster recovery and resilient AWS/Azure architecture for business-critical financial platforms.</p><div class="n">99.99% Uptime</div></div>
+    <div class="ac"><div class="ic">💰</div><h3>Cost Optimization</h3><p>Reduced operational cloud costs through optimization and right-sizing initiatives.</p><div class="n">30% ↓</div></div>
+    <div class="ac"><div class="ic">🚀</div><h3>Deployment Frequency</h3><p>Jenkins and GitHub Actions CI/CD pipelines for the e-commerce platform at HCL Tech.</p><div class="n">70% ↑</div></div>
+    <div class="ac"><div class="ic">⏱️</div><h3>Incident Resolution</h3><p>CloudWatch and Grafana monitoring with multi-AZ disaster recovery.</p><div class="n">45% Faster</div></div>
+    <div class="ac"><div class="ic">📜</div><h3>Regulatory Compliance</h3><p>Automated policy enforcement and audit controls aligned with SOX, PCI-DSS, SEC and FINRA.</p><div class="n">SOX · PCI-DSS</div></div>
+    <div class="ac"><div class="ic">🎓</div><h3>Dual Master's Degrees</h3><p>MS in Data Science (University of the Cumberlands) and MS in Computer Science (Duquesne University).</p><div class="n">2× MS Degrees</div></div>
+    <div class="ac"><div class="ic">🌐</div><h3>Open Source</h3><p>Published AWS and Terraform projects on GitHub, including serverless APIs and blue-green deployments.</p><div class="n">9+ Projects</div></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="in">
+  <div class="lab">Contact</div>
+  <h2 class="ttl">Let's Build Something <span class="g">Amazing</span></h2>
+  <p class="sub">Looking for a Cloud/DevOps Engineer, or want to discuss a project? I'd love to connect.</p>
+  <div class="cl">
+    <a class="ci" href="mailto:kalyankasha2302@gmail.com"><i class="fas fa-envelope"></i><div><small>Email</small><b>kalyankasha2302@gmail.com</b></div></a>
+    <a class="ci" href="https://www.linkedin.com/in/kalyan-k-6b8a37129/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i><div><small>LinkedIn</small><b>linkedin.com/in/kalyan-k-6b8a37129</b></div></a>
+    <a class="ci" href="https://github.com/kalyank232" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i><div><small>GitHub</small><b>github.com/kalyank232</b></div></a>
+    <a class="ci" href="tel:+14088835015"><i class="fas fa-phone"></i><div><small>Phone</small><b>+1 (408) 883-5015</b></div></a>
+    <div class="ci"><i class="fas fa-map-marker-alt"></i><div><small>Location</small><b>California, USA</b></div></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="in"><span>© 2026 Kalyan Kasha. Crafted with ☁️ &amp; ❤️</span><a href="#home" class="btn o" style="padding:8px 16px"><i class="fas fa-arrow-up"></i></a></div></footer>
+
+<script>
+const SKILLS=[
+['AWS EC2','🖥️','Expert','cloud'],['AWS S3','🗑️','Expert','cloud'],['AWS EKS','☸️','Expert','cloud'],['AWS Lambda','⚡','Advanced','cloud'],
+['VPC & IAM','🔒','Expert','cloud'],['AWS RDS','🐘','Advanced','cloud'],['CloudWatch','📊','Expert','cloud'],['Route 53 / ELB','🌐','Advanced','cloud'],
+['Azure AKS','☁️','Expert','cloud'],['Azure DevOps','🔷','Advanced','cloud'],['Azure Monitor','📈','Advanced','cloud'],['Azure Key Vault','🔑','Advanced','cloud'],
+['Terraform','🏗️','Expert','devops'],['Terragrunt','🧱','Expert','devops'],['CloudFormation / Bicep','📐','Advanced','devops'],['Ansible','🅰️','Advanced','devops'],
+['Docker','🐳','Expert','devops'],['Kubernetes','⚙️','Expert','devops'],['Helm','⛵','Advanced','devops'],['Argo CD','🐙','Advanced','devops'],
+['Jenkins','🔧','Expert','devops'],['GitHub Actions','♾️','Expert','devops'],['GitLab CI/CD','🦊','Advanced','devops'],['HashiCorp Vault','🛡️','Advanced','devops'],
+['SonarQube / Snyk','🔍','Advanced','devops'],['Prometheus / Grafana','🔥','Advanced','devops'],['ELK / Splunk / Datadog','📡','Advanced','devops'],
+['Apache Kafka','📨','Advanced','data'],['RabbitMQ','🐇','Intermediate','data'],['Snowflake','❄️','Intermediate','data'],['Amazon Redshift','🏭','Intermediate','data'],
+['Python','🐍','Expert','lang'],['Bash','💻','Expert','lang'],['PowerShell','🪟','Advanced','lang'],
+['PostgreSQL','🐬','Advanced','db'],['MySQL','🗄️','Advanced','db'],['MongoDB','🍃','Advanced','db'],['DynamoDB','⚡','Advanced','db'],['Redis','🔴','Advanced','db']];
+const PROJ=[
+['AWS Animal Crossing REST API','aws terraform','🎮','Serverless REST API provisioned entirely with Terraform: API Gateway, Cognito, Lambda, DynamoDB, S3 and Step Functions.','linear-gradient(135deg,#1a0533,#0f2e0a)','https://github.com/kalyank232/AWSAnimalCrossing'],
+['Mobile Price Predictor (SageMaker)','aws ml','📱','ML classification model deployed on AWS SageMaker with a Flask backend predicting smartphone price ranges.','linear-gradient(135deg,#0f1f2e,#1a0e2e)','https://github.com/kalyank232/Mobile-Price-Predictor-using-AWS-Sagemaker'],
+['Blue-Green Deployments for ECS','aws devops','🔵','Zero-downtime blue-green deployments for ECS using CodeDeploy, ALB traffic shifting and CloudWatch-based rollback.','linear-gradient(135deg,#0d2137,#0b3320)','https://github.com/kalyank232/blue-green-deployments-ecs'],
+['API Gateway Deployment Strategies','aws devops','🚪','Canary releases, stage variables and multi-region failover for API Gateway with Lambda and Route 53.','linear-gradient(135deg,#1a1000,#0f1a2e)','https://github.com/kalyank232/advanced-api-deployment-strategies'],
+['Health Monitoring: VPC Lattice & CloudWatch','aws monitoring','📊','Unified observability for microservices using VPC Lattice, CloudWatch composite alarms, dashboards and Synthetics.','linear-gradient(135deg,#0a1628,#0f2018)','https://github.com/kalyank232/application-health-monitoring-lattice-cloudwatch'],
+['Chat Notifications with SNS & Chatbot','aws devops terraform','💬','CloudWatch alarms routed through SNS and AWS Chatbot to Slack and Microsoft Teams, managed with Terraform.','linear-gradient(135deg,#0f1a2e,#1a0f2e)','https://github.com/kalyank232/chat-notifications-sns-chatbot'],
+['Web Monitoring: Azure App Service','devops monitoring','🌐','Azure App Service monitoring with Azure Monitor, Application Insights, availability tests and alert action groups.','linear-gradient(135deg,#0f1a28,#1a1000)','https://github.com/kalyank232/web-monitoring-app-service-monitor']];
+const $=s=>document.querySelector(s);
+function skills(f){$('#sg').innerHTML=SKILLS.filter(s=>f==='all'||s[3]===f).map(s=>`<div class="sk"><i>${s[1]}</i><b>${s[0]}</b><span>${s[2]}</span></div>`).join('')}
+function projects(f){$('#pg').innerHTML=PROJ.filter(p=>f==='all'||p[1].includes(f)).map(p=>`<article class="pc"><div class="ph" style="background:${p[4]}">${p[2]}</div><div class="pb"><small>${p[1]}</small><h3>${p[0]}</h3><p>${p[3]}</p><a href="${p[5]}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a></div></article>`).join('')}
+function tabs(id,fn){$(id).addEventListener('click',e=>{const b=e.target.closest('.tab');if(!b)return;$(id).querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));b.classList.add('on');fn(b.dataset.f)})}
+tabs('#tabs',skills);tabs('#ptabs',projects);skills('all');projects('all');
+addEventListener('scroll',()=>$('#nb').classList.toggle('s',scrollY>40),{passive:true});
+const PH=['Cloud/DevOps Engineer','AWS & Azure Specialist','Terraform & Terragrunt Expert','Kubernetes (EKS/AKS) Engineer','GitOps & CI/CD Builder','DevSecOps Practitioner'];
+let pi=0,ci=0,del=false;
+(function type(){const p=PH[pi],el=$('#ty');
+  if(!del){el.textContent=p.slice(0,++ci);if(ci===p.length){del=true;return setTimeout(type,1700)}}
+  else{el.textContent=p.slice(0,--ci);if(!ci){del=false;pi=(pi+1)%PH.length}}
+  setTimeout(type,del?50:85)})();
+</script>
+</body>
+</html>
